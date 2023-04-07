@@ -1,3 +1,14 @@
+Nom du projet : Wild Beer
+Début du projet : 5 avril 2023
+Fin du projet : 5 mai 2023
+
+Collaborateurs du projet :
+[Célia](https://www.linkedin.com/in/c%C3%A9lia-kleczynski-4b556b268/);
+[Rina](https://www.linkedin.com/in/ni-kadek-rina-wati/);
+[Aurélien](https://www.linkedin.com/in/aur%C3%A9lien-carenjot-5b55b5162/);
+[Florian](https://www.linkedin.com/in/florian-geron-613042224/);
+[Julien](https://www.linkedin.com/in/julien-benoit-0bb741145/);
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
