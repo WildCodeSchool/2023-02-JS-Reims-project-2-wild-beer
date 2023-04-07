@@ -42,3 +42,14 @@ For deployment, you have to go to `secrets` → app `actions` on the github repo
 - CAPROVER_FRONT_APPNAME : name app on caprover
 - CAPROVER_PASSWORD : password caprover
 - CAPROVER_SERVER : link of domain
+
+Nom du projet : Wild Beer
+Début du projet : 5 avril 2023
+Fin du projet : 5 mai 2023
+
+Collaborateur du projet :
+[Célia](https://www.linkedin.com/in/c%C3%A9lia-kleczynski-4b556b268/);
+[Rina](https://www.linkedin.com/in/ni-kadek-rina-wati/);
+[Aurélien](https://www.linkedin.com/in/aur%C3%A9lien-carenjot-5b55b5162/);
+[Florian](https://www.linkedin.com/in/florian-geron-613042224/);
+[Julien](https://www.linkedin.com/in/julien-benoit-0bb741145/);
