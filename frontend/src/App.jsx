@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Home from "./pages/Home";
-
 import "./App.css";
+
+import Navbar from "./components/Navbar";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      <Navbar />
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
@@ -30,7 +30,6 @@ function App() {
           {beer.abv}
         </p>
       ))}
-      ;
     </div>
   );
 }

@@ -21,6 +21,14 @@ code {
   pointer-events: none;
 }
 
+/**Navbar**/
+
+.navbar_header {
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
