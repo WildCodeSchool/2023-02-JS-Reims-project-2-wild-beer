@@ -13,10 +13,19 @@ function App() {
       });
   };
 
+  const handlerChangeMenu = () => {
+    setIsMenu(!isMenu);
+  };
+
   return (
     <div className="App">
-      {isMenu ? <Menu setIsMenu={setIsMenu} isMenu={isMenu} /> : ""}
-      <Menu setIsMenu={setIsMenu} isMenu={isMenu} />
+      {isMenu ? (
+        <Menu setIsMenu={setIsMenu} isMenu={isMenu} />
+      ) : (
+        <button type="button" onClick={handlerChangeMenu}>
+          coucou
+        </button>
+      )}
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
