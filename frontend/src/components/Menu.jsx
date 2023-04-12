@@ -8,8 +8,12 @@ function Menu({ setIsMenu, isMenu }) {
   return (
     <div className="firstMenu">
       <h1>Quelle est votre pseudo ?</h1>
-      <input type="text" />
-      <button type="button" onClick={handlerChangeMenu}>
+      <input type="text" className="inputFirstMenu" />
+      <button
+        type="button"
+        onClick={handlerChangeMenu}
+        className="buttonFirstMenu"
+      >
         Jouer
       </button>
     </div>
