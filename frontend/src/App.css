@@ -39,6 +39,10 @@ button {
   background-color: #ad1a1a;
 }
 
+.firstMenu p {
+  font-size: xx-large;
+}
+
 .buttonFirstMenu {
   border: #422c24 double;
   background-color: grey;

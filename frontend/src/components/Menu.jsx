@@ -1,17 +1,19 @@
-import PropTypes from "prop-types";
+import { useState } from "react";
 
-function Menu({ setIsMenu, isMenu }) {
-  const handlerChangeMenu = () => {
+function Menu() {
+  const [isMenu, setIsMenu] = useState(true);
+  const handleChangeMenu = () => {
     setIsMenu(!isMenu);
+    console.info(isMenu);
   };
 
   return (
     <div className="firstMenu">
-      <h1>Quelle est votre pseudo ?</h1>
+      <p>Quelle est votre pseudo ?</p>
       <input type="text" className="inputFirstMenu" />
       <button
         type="button"
-        onClick={handlerChangeMenu}
+        onClick={handleChangeMenu}
         className="buttonFirstMenu"
       >
         Jouer
@@ -19,10 +21,5 @@ function Menu({ setIsMenu, isMenu }) {
     </div>
   );
 }
-
-Menu.propTypes = {
-  setIsMenu: PropTypes.objectOf().isRequired,
-  isMenu: PropTypes.bool.isRequired,
-};
 
 export default Menu;

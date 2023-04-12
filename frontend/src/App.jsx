@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
-  const [isMenu, setIsMenu] = useState(true);
+
   const beerFetch = () => {
     fetch("http://localhost:5000/beers")
       .then((response) => response.json())
@@ -13,19 +13,9 @@ function App() {
       });
   };
 
-  const handlerChangeMenu = () => {
-    setIsMenu(!isMenu);
-  };
-
   return (
     <div className="App">
-      {isMenu ? (
-        <Menu setIsMenu={setIsMenu} isMenu={isMenu} />
-      ) : (
-        <button type="button" onClick={handlerChangeMenu}>
-          coucou
-        </button>
-      )}
+      <Menu />
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
