@@ -1,12 +1,10 @@
 import { useState } from "react";
-
-import Home from "./pages/Home";
-
+import Menu from "./components/Menu";
 import "./App.css";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
-
+  const [isMenu, setIsMenu] = useState(true);
   const beerFetch = () => {
     fetch("http://localhost:5000/beers")
       .then((response) => response.json())
@@ -17,20 +15,16 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      {isMenu ? <Menu setIsMenu={setIsMenu} isMenu={isMenu} /> : ""}
+      <Menu setIsMenu={setIsMenu} isMenu={isMenu} />
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
       {fetchedData.map((beer) => (
         <p key={beer.id}>
-          {beer.name}
-          {beer.ebc}
-          {beer.srm}
-          {beer.ibu}
-          {beer.abv}
+          {beer.name} | {beer.ebc} | {beer.srm} | {beer.ibu} | {beer.abv}
         </p>
       ))}
-      ;
     </div>
   );
 }
