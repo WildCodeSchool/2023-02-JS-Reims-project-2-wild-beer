@@ -53,6 +53,8 @@ button {
 
 .titleRules {
   text-decoration: underline;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 .rules {

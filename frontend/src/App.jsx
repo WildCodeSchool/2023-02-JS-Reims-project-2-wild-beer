@@ -15,13 +15,13 @@ function App() {
       });
   };
 
-  const afficheMoiLesRegles = () => {
+  const showMeTheRules = () => {
     setRules(!rules);
   };
 
   return (
     <div className="App">
-      <button type="button" onClick={afficheMoiLesRegles}>
+      <button type="button" onClick={showMeTheRules}>
         Rules
       </button>
       {rules ? <Rules /> : ""}

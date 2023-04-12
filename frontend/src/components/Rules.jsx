@@ -1,13 +1,13 @@
 function Rules() {
   return (
     <div className="listRules">
-      <h1 className="titleRules">Règles du jeu</h1>
+      <p className="titleRules">Règles du jeu</p>
       <ul className="rules">
-        <li>Un joueur se bat contre un ordinateur</li>
+        <li>Un joueur se bat contre un ordinateur.</li>
 
         <li>
           Le joueur et l'ordinateur commencent avec 5 cartes chacun (distribués
-          aléatoirement)
+          aléatoirement).
         </li>
 
         <li>
