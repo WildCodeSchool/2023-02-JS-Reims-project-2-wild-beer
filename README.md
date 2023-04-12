@@ -16,6 +16,15 @@ It's pre-configured with a set of tools which'll help students produce industry-
 
 ## Setup & Use
 
+### Windows users
+
+Be sure to run these commands in a git terminal:
+
+```
+git config --global core.eol lf
+git config --global core.autocrlf false
+```
+
 ### Project Initialization
 
 - In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them

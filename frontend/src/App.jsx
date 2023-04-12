@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Home from "./pages/Home";
-
 import "./App.css";
+
+import Rules from "./components/Rules";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      <Rules />
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
