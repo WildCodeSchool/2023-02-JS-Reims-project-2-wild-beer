@@ -58,3 +58,8 @@ button {
 .rules {
   list-style: none;
 }
+.listRules {
+  background-color: #ad1a1a;
+  border-radius: 2rem;
+  box-shadow: 10px 5px 5px #422c24;
+}

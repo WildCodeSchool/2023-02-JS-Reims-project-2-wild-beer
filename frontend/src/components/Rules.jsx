@@ -1,6 +1,6 @@
 function Rules() {
   return (
-    <div>
+    <div className="listRules">
       <h1 className="titleRules">Règles du jeu</h1>
       <ul className="rules">
         <li>Un joueur se bat contre un ordinateur</li>

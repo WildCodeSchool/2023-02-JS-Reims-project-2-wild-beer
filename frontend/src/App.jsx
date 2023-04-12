@@ -6,7 +6,7 @@ import Rules from "./components/Rules";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
-
+  const [rules, setRules] = useState(true);
   const beerFetch = () => {
     fetch("http://localhost:5000/beers")
       .then((response) => response.json())
@@ -15,9 +15,16 @@ function App() {
       });
   };
 
+  const afficheMoiLesRegles = () => {
+    setRules(!rules);
+  };
+
   return (
     <div className="App">
-      <Rules />
+      <button type="button" onClick={afficheMoiLesRegles}>
+        Rules
+      </button>
+      {rules ? <Rules /> : ""}
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
