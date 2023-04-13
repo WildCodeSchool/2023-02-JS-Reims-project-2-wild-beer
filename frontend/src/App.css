@@ -37,14 +37,18 @@ nav img {
 }
 
 .App {
+  background-image: url("./assets/img/background-wood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.containerMenu {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  background-image: url("./assets/img/background-wood.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 100vh;
 }
 
