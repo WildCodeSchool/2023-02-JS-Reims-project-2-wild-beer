@@ -4,11 +4,9 @@ import Menu from "./components/Menu";
 
 import "./App.css";
 
-
 import Navbar from "./components/Navbar";
 
 import Rules from "./components/Rules";
-
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
