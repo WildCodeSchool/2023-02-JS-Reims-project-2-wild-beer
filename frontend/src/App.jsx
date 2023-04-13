@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Menu from "./components/Menu";
+
 import "./App.css";
 
 
@@ -26,20 +28,18 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Menu />
       <button type="button" onClick={showMeTheRules}>
         Rules
       </button>
       {rules && <Rules />}
+
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
       {fetchedData.map((beer) => (
         <p key={beer.id}>
-          {beer.name}
-          {beer.ebc}
-          {beer.srm}
-          {beer.ibu}
-          {beer.abv}
+          {beer.name} | {beer.ebc} | {beer.srm} | {beer.ibu} | {beer.abv}
         </p>
       ))}
     </div>
