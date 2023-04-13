@@ -8,9 +8,11 @@ function Menu() {
   };
 
   return (
-    <div className="firstMenu">
-      <p>Quelle est votre pseudo ?</p>
-      <input type="text" className="inputFirstMenu" />
+    <form className="firstMenu">
+      <label>
+        Quelle est votre pseudo ?
+        <input type="text" className="inputFirstMenu" />
+      </label>
       <button
         type="button"
         onClick={handleChangeMenu}
@@ -18,7 +20,7 @@ function Menu() {
       >
         Jouer
       </button>
-    </div>
+    </form>
   );
 }
 

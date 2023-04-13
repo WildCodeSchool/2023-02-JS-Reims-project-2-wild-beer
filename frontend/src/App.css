@@ -18,7 +18,7 @@ body {
   gap: 2rem;
   background-image: url("./assets/img/background-wood.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -39,8 +39,13 @@ button {
   background-color: #ad1a1a;
 }
 
-.firstMenu p {
+.firstMenu label {
   font-size: xx-large;
+  text-align: center;
+}
+
+.firstMenu label input {
+  margin: 1rem;
 }
 
 .buttonFirstMenu {
