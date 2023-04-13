@@ -4,6 +4,8 @@ import Menu from "./components/Menu";
 
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+
 import Rules from "./components/Rules";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Menu />
       <button type="button" onClick={showMeTheRules}>
         Rules
