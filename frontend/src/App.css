@@ -1,11 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
@@ -35,4 +31,19 @@ nav img {
   background-color: transparent;
   border-radius: 9rem;
   border-color: #422c24;
+}
+
+.titleRules {
+  text-decoration: underline;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.rules {
+  list-style: none;
+}
+.listRules {
+  background-color: #ad1a1a;
+  border-radius: 2rem;
+  box-shadow: 10px 5px 5px #422c24;
 }
