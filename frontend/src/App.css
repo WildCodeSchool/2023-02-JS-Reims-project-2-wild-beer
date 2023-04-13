@@ -8,6 +8,8 @@ body {
   font-family: "Virgil";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
 }
 
 .App {
@@ -65,4 +67,19 @@ button {
   text-align: center;
   font-size: 2rem;
   border: #422c24 solid;
+}
+
+.titleRules {
+  text-decoration: underline;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.rules {
+  list-style: none;
+}
+.listRules {
+  background-color: #ad1a1a;
+  border-radius: 2rem;
+  box-shadow: 10px 5px 5px #422c24;
 }
