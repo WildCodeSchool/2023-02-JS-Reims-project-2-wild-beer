@@ -1,7 +1,7 @@
 function Rules() {
   return (
-    <div className="listRules">
-      <p className="titleRules">Règles du jeu</p>
+    <section className="listRules">
+      <h1 className="titleRules">Règles du jeu</h1>
       <ul className="rules">
         <li>Un joueur se bat contre un ordinateur.</li>
 
@@ -28,7 +28,7 @@ function Rules() {
           Celui qui possède le plus de point bière en fin de partie gagne.
         </li>
       </ul>
-    </div>
+    </section>
   );
 }
 

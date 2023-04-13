@@ -24,7 +24,7 @@ function App() {
       <button type="button" onClick={showMeTheRules}>
         Rules
       </button>
-      {rules ? <Rules /> : ""}
+      {rules && <Rules />}
       <button type="button" onClick={beerFetch}>
         Viens boire un coup !
       </button>
