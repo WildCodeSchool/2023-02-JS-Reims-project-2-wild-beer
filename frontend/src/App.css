@@ -15,25 +15,24 @@ code {
 
 /**Navbar**/
 
-.navbar_header {
+.navbar_nav {
   background-color: #422c24;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-header img {
-  width: 3rem;
+nav img {
+  width: 2rem;
 }
 
 .navbar_logo {
-  width: 13.6rem;
+  width: 7rem;
 }
 
 .navbar_button {
   background-color: transparent;
   border-radius: 9rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin: 2rem;
   border-color: #422c24;
 }
