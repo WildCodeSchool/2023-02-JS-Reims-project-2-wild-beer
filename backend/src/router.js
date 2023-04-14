@@ -6,6 +6,7 @@ const itemControllers = require("./controllers/itemControllers");
 
 const beerList = [
   {
+    id: 1,
     name: "Punk IPA 2007-2010",
     abv: 6.0,
     ibu: 60.0,
@@ -13,6 +14,7 @@ const beerList = [
     srm: 8.5,
   },
   {
+    id: 2,
     name: "Bad Pixie",
     abv: 4.7,
     ibu: 45.0,
@@ -20,6 +22,7 @@ const beerList = [
     srm: 4.0,
   },
   {
+    id: 3,
     name: "Buzz",
     abv: 4.5,
     ibu: 60.0,
@@ -27,6 +30,7 @@ const beerList = [
     srm: 10.0,
   },
   {
+    id: 4,
     name: "Trashy Blonde",
     abv: 4.1,
     ibu: 41.5,
@@ -34,6 +38,7 @@ const beerList = [
     srm: 15.0,
   },
   {
+    id: 5,
     name: "Berliner weiss with yuzu",
     abv: 4.2,
     ibu: 8.0,
@@ -41,6 +46,7 @@ const beerList = [
     srm: 4.0,
   },
   {
+    id: 6,
     name: "Pilsen lager",
     abv: 6.3,
     ibu: 55.0,
@@ -48,6 +54,7 @@ const beerList = [
     srm: 15.0,
   },
   {
+    id: 7,
     name: "Avery brown dredge",
     abv: 7.2,
     ibu: 59.0,
@@ -55,6 +62,7 @@ const beerList = [
     srm: 5.0,
   },
   {
+    id: 8,
     name: "Eletric India",
     abv: 5.2,
     ibu: 38.0,
@@ -62,6 +70,7 @@ const beerList = [
     srm: 7.5,
   },
   {
+    id: 9,
     name: "AB:12",
     abv: 11.2,
     ibu: 35.0,
@@ -69,6 +78,7 @@ const beerList = [
     srm: 40.0,
   },
   {
+    id: 10,
     name: "Fake lager",
     abv: 4.7,
     ibu: 40.0,
