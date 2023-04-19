@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-function Menu({ handleChangeMenu }) {
+function Menu() {
   return (
     <section className="containerMenu">
       <form className="firstMenu">
@@ -8,20 +8,15 @@ function Menu({ handleChangeMenu }) {
           Quelle est votre pseudo ?
           <input type="text" className="inputFirstMenu" />
         </label>
-        <button
-          type="button"
-          onClick={handleChangeMenu}
-          className="buttonFirstMenu"
-        >
-          Jouer
-        </button>
+
+        <Link to="/wild-beer-gaming">
+          <button type="button" className="buttonFirstMenu">
+            Jouer
+          </button>
+        </Link>
       </form>
     </section>
   );
 }
-
-Menu.propTypes = {
-  handleChangeMenu: PropTypes.func.isRequired,
-};
 
 export default Menu;
