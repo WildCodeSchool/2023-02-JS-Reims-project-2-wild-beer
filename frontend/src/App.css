@@ -66,7 +66,6 @@ nav img {
   border-radius: 1rem;
   background-color: #422c24;
   box-shadow: 5px 5px 5px black;
-  width: 70%;
   color: white;
 }
 
@@ -96,7 +95,6 @@ nav img {
   text-align: center;
   font-size: 2rem;
   border: #422c24 solid;
-  width: 70%;
 }
 
 button {
@@ -143,5 +141,13 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 800px) {
+  .firstMenu {
+    max-width: 20rem;
+  }
+  .inputFirstMenu {
+    max-width: 18rem;
   }
 }

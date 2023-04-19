@@ -7,7 +7,7 @@ function Rules() {
 
         <li>
           Le joueur et l'ordinateur commencent avec 5 cartes bière chacun
-          (distribués aléatoirement).
+          (distribuées aléatoirement).
         </li>
 
         <li>
