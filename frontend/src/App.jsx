@@ -4,7 +4,7 @@ import "./App.css";
 import Board from "./components/Board";
 import Carte from "./components/Carte";
 
-import Cards from "./components/Cards";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/wild-beer-gaming" element={<Board />} />
       </Routes>
       <Carte />
-      <Cards />
+      <Card />
     </div>
   );
 }

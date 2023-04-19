@@ -1,13 +1,13 @@
 import React from "react";
 
-function Cards() {
+function Card() {
   return (
-    <div className="card">
+    <section className="card">
       <h1>biere 1</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque
       </p>
-    </div>
+    </section>
   );
 }
-export default Cards;
+export default Card;

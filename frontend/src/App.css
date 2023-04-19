@@ -183,7 +183,6 @@ button {
 }
 
 .card p {
-  justify-content: right;
   background-color: lightgrey;
   opacity: 0.7;
   border-radius: 1rem;
