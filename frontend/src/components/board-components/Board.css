@@ -1,0 +1,13 @@
+.game-field {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.main-board {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
