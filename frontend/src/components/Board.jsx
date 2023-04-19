@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Navbar from "./board-components/Navbar";
-import Hand from "./board-components/Hand";
+import Gamefield from "./board-components/Gamefield";
 
 import "./board-components/Board.css";
 
@@ -11,11 +11,7 @@ function Board({ handleChangeMenu, showMeTheRules }) {
         handleChangeMenu={handleChangeMenu}
         showMeTheRules={showMeTheRules}
       />
-      <div className="game-field">
-        <Hand />
-        <div>Test champs bataille</div>
-        <Hand />
-      </div>
+      <Gamefield />
     </div>
   );
 }
