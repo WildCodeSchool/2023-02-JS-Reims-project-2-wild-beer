@@ -15,7 +15,7 @@ body {
 /**Navbar**/
 
 .navbar_nav {
-  background-color: #422c24;
+  background-color: #ad1a1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,6 @@ nav img {
 .navbar_button {
   background-color: transparent;
   border-radius: 9rem;
-  border-color: #422c24;
   box-shadow: 5px 5px 5px black;
 }
 
@@ -62,12 +61,12 @@ nav img {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  border: #422c24 double;
   max-width: 30rem;
   padding: 2rem;
   border-radius: 1rem;
-  background-color: #ad1a1a;
+  background-color: #422c24;
   box-shadow: 5px 5px 5px black;
+  color: white;
 }
 
 .firstMenu label {
@@ -80,8 +79,7 @@ nav img {
 }
 
 .buttonFirstMenu {
-  border: #422c24 double;
-  background-color: grey;
+  background-color: white;
   border-radius: 1rem;
   font-family: "Virgil";
   box-shadow: 5px 5px 5px black;
@@ -118,14 +116,15 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  list-style-image: url("/2023-02-JS-Reims-project-2-wild-beer/frontend/src/Images/peanut1.png");
 }
 
 .listRules {
-  background-color: #ad1a1a;
+  background-color: #422c24;
   border-radius: 2rem;
-  box-shadow: 10px 5px 5px #422c24;
   position: absolute;
   opacity: 0.85;
+  color: white;
 }
 
 .rules li {
@@ -133,9 +132,9 @@ button {
 }
 
 /* API Fetch */
-.containertest{
+.containertest {
   display: flex;
-  flex-direction:center;
+  flex-direction: center;
   align-items: center;
   gap: 1rem;
 }
@@ -150,4 +149,13 @@ button {
   border-radius: 1rem;
   background-color: #ad1a1a;
   box-shadow: 5px 5px 5px black;
+}
+
+@media screen and (max-width: 800px) {
+  .firstMenu {
+    max-width: 20rem;
+  }
+  .inputFirstMenu {
+    max-width: 18rem;
+  }
 }
