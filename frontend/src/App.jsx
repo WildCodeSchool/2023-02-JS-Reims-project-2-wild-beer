@@ -1,12 +1,9 @@
 import { useState } from "react";
-
 import Menu from "./components/Menu";
-
 import "./App.css";
-
 import Navbar from "./components/Navbar";
-
 import Rules from "./components/Rules";
+import Carte from "./components/Carte";
 
 function App() {
   const [rules, setRules] = useState(false);
@@ -21,7 +18,6 @@ function App() {
   const showMeTheRules = () => {
     setRules(!rules);
   };
-
   return (
     <div className="App">
       {isMenu ? (
@@ -33,6 +29,7 @@ function App() {
         />
       )}
       {rules && <Rules />}
+      <Carte />
     </div>
   );
 }
