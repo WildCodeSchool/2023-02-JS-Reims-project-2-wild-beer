@@ -122,7 +122,8 @@ button {
 .listRules {
   background-color: #422c24;
   border-radius: 2rem;
-  position: absolute;
+  position: fixed;
+  top: 10rem;
   opacity: 0.85;
   color: white;
 }
