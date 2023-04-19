@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Menu from "./components/Menu";
-import Navbar from "./components/Navbar";
+import "./App.css";
+import Board from "./components/Board";
 import Carte from "./components/Carte";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Menu />} />
-        <Route path="/wild-beer-gaming" element={<Navbar />} />
+        <Route path="/wild-beer-gaming" element={<Board />} />
       </Routes>
       <Carte />
     </div>

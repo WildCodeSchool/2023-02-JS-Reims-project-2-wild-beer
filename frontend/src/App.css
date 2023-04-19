@@ -116,13 +116,13 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  list-style-image: url("/2023-02-JS-Reims-project-2-wild-beer/frontend/src/Images/peanut1.png");
 }
 
 .listRules {
   background-color: #422c24;
   border-radius: 2rem;
-  position: absolute;
+  position: fixed;
+  top: 10rem;
   opacity: 0.85;
   color: white;
 }
@@ -131,6 +131,13 @@ button {
   font-size: large;
 }
 
+@media screen and (min-width: 1200px) {
+  .listRules {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 /* API Fetch */
 .containertest {
   display: flex;
@@ -150,7 +157,6 @@ button {
   background-color: #ad1a1a;
   box-shadow: 5px 5px 5px black;
 }
-
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;

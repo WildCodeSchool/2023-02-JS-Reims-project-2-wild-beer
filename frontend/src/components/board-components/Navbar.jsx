@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Rules from "./Rules";
+
+import Rules from "../Rules";
 // Images Importer
-import homeAccueil from "../Images/home.png";
-import regleInterrogation from "../Images/point-interrogation.png";
-import Logo from "../Images/wild-beer-logo.png";
+import homeAccueil from "../../Images/home.png";
+import regleInterrogation from "../../Images/point-interrogation.png";
+import Logo from "../../Images/wild-beer-logo.png";
 
 function Navbar() {
   const [rules, setRules] = useState(false);
