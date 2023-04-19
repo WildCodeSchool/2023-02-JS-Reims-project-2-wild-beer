@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import homeAccueil from "../Images/home.png";
-import regleInterrogation from "../Images/point-interrogation.png";
-import Logo from "../Images/wild-beer-logo.png";
+import homeAccueil from "../../Images/home.png";
+import regleInterrogation from "../../Images/point-interrogation.png";
+import Logo from "../../Images/wild-beer-logo.png";
 
 function Navbar({ handleChangeMenu, showMeTheRules }) {
   return (

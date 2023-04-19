@@ -4,9 +4,8 @@ import Menu from "./components/Menu";
 
 import "./App.css";
 
-import Navbar from "./components/Navbar";
-
 import Rules from "./components/Rules";
+import Board from "./components/Board";
 
 function App() {
   const [rules, setRules] = useState(false);
@@ -27,7 +26,7 @@ function App() {
       {isMenu ? (
         <Menu handleChangeMenu={handleChangeMenu} />
       ) : (
-        <Navbar
+        <Board
           handleChangeMenu={handleChangeMenu}
           showMeTheRules={showMeTheRules}
         />

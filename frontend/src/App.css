@@ -137,3 +137,11 @@ button {
   scale: 1.05;
   transition: all 0.2s ease-in-out;
 }
+
+@media screen and (min-width: 1200px) {
+  .listRules {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

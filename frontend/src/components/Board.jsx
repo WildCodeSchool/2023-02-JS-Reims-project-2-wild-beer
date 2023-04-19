@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
-import Navbar from "./Navbar";
-import Hand from "./Hand";
+import Navbar from "./board-components/Navbar";
+import Hand from "./board-components/Hand";
+
+import "./board-components/Board.css";
 
 function Board({ handleChangeMenu, showMeTheRules }) {
   return (
