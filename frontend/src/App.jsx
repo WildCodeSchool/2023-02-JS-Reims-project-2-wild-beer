@@ -4,6 +4,8 @@ import "./App.css";
 import Board from "./components/Board";
 import Carte from "./components/Carte";
 
+import Card from "./components/Card";
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +14,7 @@ function App() {
         <Route path="/wild-beer-gaming" element={<Board />} />
       </Routes>
       <Carte />
+      <Card />
     </div>
   );
 }
