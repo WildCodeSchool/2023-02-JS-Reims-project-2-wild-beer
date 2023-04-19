@@ -131,3 +131,23 @@ button {
 .rules li {
   font-size: large;
 }
+
+/* API Fetch */
+.containertest{
+  display: flex;
+  flex-direction:center;
+  align-items: center;
+  gap: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20rem;
+  max-width: 20rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: #ad1a1a;
+  box-shadow: 5px 5px 5px black;
+}
