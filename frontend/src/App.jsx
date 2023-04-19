@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 
 import Rules from "./components/Rules";
 
+import Cards from "./components/Cards";
+
 function App() {
   const [rules, setRules] = useState(false);
   const [isMenu, setIsMenu] = useState(true);
@@ -33,6 +35,7 @@ function App() {
         />
       )}
       {rules && <Rules />}
+      <Cards />
     </div>
   );
 }

@@ -136,6 +136,37 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
+.card {
+  width: 200px;
+  height: 300px;
+  border-radius: 1rem;
+  background-color: #f4b324;
+  box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 6px;
+  background-image: url("./Images/WildBeer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgrey;
+  opacity: 0.7;
+  border-radius: 1rem;
+  color: black;
+}
+
+.card p {
+  justify-content: right;
+  background-color: lightgrey;
+  opacity: 0.7;
+  border-radius: 1rem;
+}
+
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
