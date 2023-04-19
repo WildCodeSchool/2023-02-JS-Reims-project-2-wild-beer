@@ -6,13 +6,13 @@ function Rules() {
         <li>Un joueur se bat contre un ordinateur.</li>
 
         <li>
-          Le joueur et l'ordinateur commencent avec 5 cartes chacun (distribués
-          aléatoirement).
+          Le joueur et l'ordinateur commencent avec 5 cartes bière chacun
+          (distribués aléatoirement).
         </li>
 
         <li>
-          Chaque carte possédera des attributs correspondant aux différents
-          thèmes des rounds.
+          Chaque carte possédera des attributs bière correspondant aux
+          différents thèmes des rounds.
         </li>
 
         <li>
@@ -21,11 +21,11 @@ function Rules() {
 
         <li>
           Après la sélection de la carte par les joueurs, le meilleur score
-          correspondant au thème du round remporte un point bière.
+          correspondant au thème du round remporte un point apéro.
         </li>
 
         <li>
-          Celui qui possède le plus de point bière en fin de partie gagne.
+          Celui qui possède le plus de point apéro en fin de partie gagne.
         </li>
       </ul>
     </section>
