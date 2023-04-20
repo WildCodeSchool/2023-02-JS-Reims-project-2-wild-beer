@@ -1,24 +1,15 @@
-import PropTypes from "prop-types";
 import Navbar from "./board-components/Navbar";
 import Gamefield from "./board-components/Gamefield";
 
 import "./board-components/Board.css";
 
-function Board({ handleChangeMenu, showMeTheRules }) {
+function Board() {
   return (
     <div className="main-board">
-      <Navbar
-        handleChangeMenu={handleChangeMenu}
-        showMeTheRules={showMeTheRules}
-      />
+      <Navbar />
       <Gamefield />
     </div>
   );
 }
-
-Board.propTypes = {
-  handleChangeMenu: PropTypes.func.isRequired,
-  showMeTheRules: PropTypes.func.isRequired,
-};
 
 export default Board;

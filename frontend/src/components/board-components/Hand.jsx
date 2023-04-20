@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Carte from "../Carte";
+import Card from "../Card";
 
 function Hand() {
   const [cardList, setCardList] = useState([]);
@@ -13,12 +13,14 @@ function Hand() {
       });
   }, []);
   return (
-    <div className="containertest">
+    <ul className="containertest">
       {cardList.map((card) => (
-        <Carte handcard={card} key={card.id} />
+        <li>
+          <Card handcard={card} key={card.id} />
+        </li>
       ))}
       ;
-    </div>
+    </ul>
   );
 }
 
