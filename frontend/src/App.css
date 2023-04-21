@@ -163,8 +163,8 @@ button {
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 225px;
   border-radius: 1rem;
   background-color: #f4b324;
   box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 6px;
@@ -223,4 +223,29 @@ button {
 }
 div {
   color: #ffffff;
+}
+
+/* Carte Selectionner */
+.Selection {
+  display: flex;
+  width: 100px;
+  height: 150px;
+  border-radius: 1rem;
+  text-align: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: black;
+}
+
+.Selecteur {
+  display: flex;
+}
+
+/* Score */
+.Score {
+  height: 70px;
+  width: 150px;
+  margin-left: 2rem;
+  color: white;
+  border-radius: 2rem;
 }
