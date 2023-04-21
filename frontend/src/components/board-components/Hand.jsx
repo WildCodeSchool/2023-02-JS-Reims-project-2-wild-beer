@@ -16,7 +16,7 @@ function Hand() {
     <ul className="containertest">
       {cardList.map((card) => (
         <li>
-          <Card handcard={card} key={card.id} />
+          <Card card={card} key={card.id} />
         </li>
       ))}
       ;

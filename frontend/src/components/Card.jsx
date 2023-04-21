@@ -1,21 +1,21 @@
 import PropTypes from "prop-types";
 
-function Card({ handcard }) {
+function Card({ card }) {
   return (
-    <section className="card" key={handcard.id}>
-      <h1>{handcard.name}</h1>
+    <section className="card" key={card.id}>
+      <h1>{card.name}</h1>
       <ul>
-        <li>EBC : {handcard.ebc}</li>
-        <li>ABV : {handcard.abv}</li>
-        <li>IBU : {handcard.ibu}</li>
-        <li>SRM : {handcard.srm}</li>
+        <li>EBC : {card.ebc}</li>
+        <li>ABV : {card.abv}</li>
+        <li>IBU : {card.ibu}</li>
+        <li>SRM : {card.srm}</li>
       </ul>
     </section>
   );
 }
 
 Card.propTypes = {
-  handcard: PropTypes.shape({
+  card: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     ebc: PropTypes.number.isRequired,
