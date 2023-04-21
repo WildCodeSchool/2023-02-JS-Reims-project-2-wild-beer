@@ -51,8 +51,8 @@ nav img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
-  min-height: 100vh;
+  gap: 1rem;
+  min-height: 30vh;
 }
 
 .firstMenu {
@@ -99,6 +99,24 @@ nav img {
 
 button {
   font-size: calc(10px + 2vmin);
+}
+#showgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 800px;
+  font-size: 30px;
+  color:white;
+
+}
+.homepage {
+  background-image: url("./Images/bar.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  
+}
+.logobar{
+  height: 13rem;
 }
 
 /*Rules*/
