@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 
-function Carte({ handcard }) {
-  return (
+function Carte({ handcard, isShown }) {
+  return isShown ? (
     <section className="card" key={handcard.id}>
       <h1>{handcard.name}</h1>
       <ul>
@@ -11,6 +12,8 @@ function Carte({ handcard }) {
         <li>SRM : {handcard.srm}</li>
       </ul>
     </section>
+  ) : (
+    <section className="Backcard" key={handcard.id} />
   );
 }
 

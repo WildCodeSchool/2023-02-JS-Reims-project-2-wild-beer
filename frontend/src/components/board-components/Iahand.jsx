@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Carte from "../Carte";
 
-function Hand() {
+function Iahand() {
   const [cardList, setCardList] = useState([]);
   /* This is fetch API */
   useEffect(() => {
@@ -15,11 +15,10 @@ function Hand() {
   return (
     <div className="containertest">
       {cardList.map((card) => (
-        <Carte handcard={card} key={card.id} isShown />
+        <Carte handcard={card} key={card.id} />
       ))}
       ;
     </div>
   );
 }
-
-export default Hand;
+export default Iahand;

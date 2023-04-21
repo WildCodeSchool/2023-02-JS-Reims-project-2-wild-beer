@@ -1,10 +1,11 @@
 import Hand from "./Hand";
+import Iahand from "./Iahand";
 
 function Gamefield() {
   return (
     <div className="game-field">
-      <Hand />
-      <div>Hello from field</div>
+      <Iahand />
+      <div>VS</div>
       <Hand />
     </div>
   );

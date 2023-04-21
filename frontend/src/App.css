@@ -189,6 +189,7 @@ button {
 
 .card ul {
   background-color: lightgrey;
+  color: black;
   opacity: 0.7;
   border-radius: 1rem;
 }
@@ -196,6 +197,22 @@ button {
 .card ul li {
   list-style: none;
 }
+
+.Backcard {
+  width: 100px;
+  height: 150px;
+  border-radius: 1rem;
+  background-color: #ad1a1a;
+  box-shadow: #efdec6 0px 1px 6px, #efdec6 0px 0px 0px 6px;
+  background-image: url("./Images/wild-beer-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
@@ -203,4 +220,7 @@ button {
   .inputFirstMenu {
     max-width: 18rem;
   }
+}
+div {
+  color: #ffffff;
 }
