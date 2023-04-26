@@ -3,7 +3,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from "../Card";
 
-function Hand({ cardList, putCardOnField, cardSelect, changeCardSelect }) {
+function Hand({
+  cardList,
+  putCardOnField,
+  cardSelect,
+  changeCardSelect,
+  isPlayed,
+}) {
   return (
     <ul className="containertest">
       {cardList.map((card) => (
@@ -13,6 +19,7 @@ function Hand({ cardList, putCardOnField, cardSelect, changeCardSelect }) {
             cardSelect={cardSelect}
             changeCardSelect={changeCardSelect}
             putCardOnField={putCardOnField}
+            isPlayed={isPlayed}
           />
         </li>
       ))}
@@ -35,6 +42,7 @@ Hand.propTypes = {
   putCardOnField: PropTypes.func.isRequired,
   cardSelect: PropTypes.number.isRequired,
   changeCardSelect: PropTypes.func.isRequired,
+  isPlayed: PropTypes.bool.isRequired,
 };
 
 export default Hand;

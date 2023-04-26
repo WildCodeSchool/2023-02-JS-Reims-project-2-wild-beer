@@ -14,7 +14,7 @@ function Gamefield() {
     fetch("https://api.punkapi.com/v2/beers?brewed_before=11-2012&abv_gt=6")
       .then((response) => response.json())
       .then((data) => {
-        for (let i = 0; i < cardList.length; i += 1) {
+        for (let i = 0; i < 5; i += 1) {
           Object.defineProperty(data[i], "id", { value: i });
         }
         setCardList(data.slice(0, 5));
@@ -29,12 +29,6 @@ function Gamefield() {
 
   return (
     <div className="game-field">
-      <Hand
-        cardList={cardList}
-        putCardOnField={putCardOnField}
-        cardSelect={cardSelect}
-        changeCardSelect={changeCardSelect}
-      />
       <Field
         cardOnField={cardOnField}
         putCardOnField={putCardOnField}
@@ -46,6 +40,7 @@ function Gamefield() {
         putCardOnField={putCardOnField}
         cardSelect={cardSelect}
         changeCardSelect={changeCardSelect}
+        isPlayed
       />
     </div>
   );

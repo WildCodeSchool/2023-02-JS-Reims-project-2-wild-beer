@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
 
-function Card({ card, cardSelect, changeCardSelect, putCardOnField }) {
+function Card({
+  card,
+  cardSelect,
+  changeCardSelect,
+  putCardOnField,
+  isPlayed,
+}) {
   // (rare case) check whether the different card values are defined or not
 
   let classColor = "";
@@ -37,7 +43,7 @@ function Card({ card, cardSelect, changeCardSelect, putCardOnField }) {
           <li>SRM : {card.srm}</li>
         </ul>
       </section>
-      {cardSelect === card.id && (
+      {cardSelect === card.id && isPlayed && (
         <button
           className="button-play"
           type="button"
@@ -64,6 +70,7 @@ Card.propTypes = {
   cardSelect: PropTypes.number.isRequired,
   changeCardSelect: PropTypes.func.isRequired,
   putCardOnField: PropTypes.func.isRequired,
+  isPlayed: PropTypes.bool.isRequired,
 };
 
 export default Card;
