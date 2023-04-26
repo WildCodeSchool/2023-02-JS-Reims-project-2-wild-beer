@@ -7,24 +7,10 @@ function Card({
   putCardOnField,
   isPlayed,
 }) {
-  // (rare case) check whether the different card values are defined or not
-
-  let classColor = "";
-  // check of the ebc to define the class that will have the appropriate colors
-  if (card.ebc < 16) {
-    classColor = "card white";
-  } else if (card.ebc < 44) {
-    classColor = "card blond";
-  } else if (card.ebc < 76) {
-    classColor = "card brown";
-  } else {
-    classColor = "card black";
-  }
-
   return (
     <>
       <section
-        className={classColor}
+        className="card"
         key={card.id}
         onClick={() => {
           changeCardSelect(card.id);

@@ -26,3 +26,7 @@
   flex-direction: row;
   gap: 5rem;
 }
+
+li {
+  list-style-type: none;
+}

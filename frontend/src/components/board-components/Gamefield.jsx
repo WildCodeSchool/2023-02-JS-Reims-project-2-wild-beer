@@ -18,13 +18,29 @@ function Gamefield() {
           Object.defineProperty(data[i], "id", { value: i });
         }
         setCardList(data.slice(0, 5));
-        console.info(cardList);
       });
   }, []);
 
-  const putCardOnField = (cardid) => {
-    setCardOnField(cardList.slice(cardid, cardid + 1));
-    console.info(cardid);
+  const putCardOnField = (cardId) => {
+    const cleanTable = ({ newCardList, newCardOnField }, card) => {
+      if (card.id !== cardId) {
+        newCardList.push(card);
+      } else {
+        newCardOnField.push(card);
+      }
+      return {
+        newCardList,
+        newCardOnField,
+      };
+    };
+
+    const { newCardList, newCardOnField } = cardList.reduce(cleanTable, {
+      newCardList: [],
+      newCardOnField: [],
+    });
+
+    setCardOnField(newCardOnField);
+    setCardList(newCardList);
   };
 
   return (
@@ -34,6 +50,7 @@ function Gamefield() {
         putCardOnField={putCardOnField}
         cardSelect={cardSelect}
         changeCardSelect={changeCardSelect}
+        isPlayed={false}
       />
       <Hand
         cardList={cardList}

@@ -1,7 +1,13 @@
 import PropTypes from "prop-types";
 import Card from "../Card";
 
-function Field({ cardOnField, cardSelect, changeCardSelect, putCardOnField }) {
+function Field({
+  cardOnField,
+  cardSelect,
+  changeCardSelect,
+  putCardOnField,
+  isPlayed,
+}) {
   return (
     <section className="warField">
       <div>emplacement 1</div>
@@ -12,6 +18,7 @@ function Field({ cardOnField, cardSelect, changeCardSelect, putCardOnField }) {
             cardSelect={cardSelect}
             changeCardSelect={changeCardSelect}
             putCardOnField={putCardOnField}
+            isPlayed={isPlayed}
           />
         </li>
       ))}
@@ -35,6 +42,7 @@ Field.propTypes = {
   cardSelect: PropTypes.number.isRequired,
   changeCardSelect: PropTypes.func.isRequired,
   putCardOnField: PropTypes.func.isRequired,
+  isPlayed: PropTypes.bool.isRequired,
 };
 
 export default Field;
