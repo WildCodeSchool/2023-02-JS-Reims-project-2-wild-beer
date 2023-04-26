@@ -7,10 +7,23 @@ function Card({
   putCardOnField,
   isPlayed,
 }) {
+  const getColorClassName = () => {
+    let colorClassName = "";
+    if (card.ebc <= 20) {
+      colorClassName = "blonde";
+    } else if (card.ebc <= 30) {
+      colorClassName = "ambre";
+    } else if (card.ebc <= 75) {
+      colorClassName = "brunes";
+    } else if (card.ebc > 75) {
+      colorClassName = "noires";
+    }
+    return colorClassName;
+  };
   return (
     <>
       <section
-        className="card"
+        className={`card ${getColorClassName()}`}
         key={card.id}
         onClick={() => {
           changeCardSelect(card.id);
