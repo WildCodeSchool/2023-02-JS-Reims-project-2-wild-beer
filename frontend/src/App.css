@@ -27,10 +27,23 @@ nav img {
 .navbar_logo {
   width: 7rem;
 }
+@keyframes animation-navbar-button {
+  0% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+
 .navbar_button {
   background-color: transparent;
   border-radius: 9rem;
   box-shadow: 5px 5px 5px black;
+  animation: animation-navbar-button 4s infinite;
 }
 .App {
   background-image: url("./assets/img/background-wood.jpg");
