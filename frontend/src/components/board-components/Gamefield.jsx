@@ -1,3 +1,4 @@
+import Score from "../Score";
 import Hand from "./Hand";
 
 function Gamefield() {
@@ -5,6 +6,7 @@ function Gamefield() {
     <div className="game-field">
       <Hand />
       <div>Hello from field</div>
+      <Score />
       <Hand />
     </div>
   );
