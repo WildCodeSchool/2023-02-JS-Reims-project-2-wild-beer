@@ -47,6 +47,9 @@ nav img {
 /*First Menu*/
 
 .containerMenu {
+  background-image: url("./Images/beer_bar.jpeg");
+  background-size: cover;
+  width: 200vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +57,6 @@ nav img {
   gap: 2rem;
   min-height: 100vh;
 }
-
 .firstMenu {
   display: flex;
   justify-content: center;
@@ -68,7 +70,6 @@ nav img {
   box-shadow: 5px 5px 5px black;
   color: white;
 }
-
 .firstMenu label {
   font-size: xx-large;
   text-align: center;
@@ -84,11 +85,9 @@ nav img {
   font-family: "Virgil";
   box-shadow: 5px 5px 5px black;
 }
-
 .buttonFirstMenu:hover {
   background-color: lightgrey;
 }
-
 .inputFirstMenu {
   font-family: "Virgil";
   border-radius: 1rem;
@@ -96,20 +95,17 @@ nav img {
   font-size: 2rem;
   border: #422c24 solid;
 }
-
 button {
   font-size: calc(10px + 2vmin);
 }
 
 /*Rules*/
-
 .titleRules {
   text-decoration: underline;
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
 }
-
 .rules {
   list-style: none;
   display: flex;
@@ -161,13 +157,12 @@ button {
   background-color: #ad1a1a;
   box-shadow: 5px 5px 5px black;
 }
-
 .card {
   width: 200px;
   height: 300px;
   border-radius: 1rem;
   background-color: #f4b324;
-  box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 6px;
+  box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 3px;
   background-image: url("./Images/WildBeer.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -176,7 +171,6 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card h1 {
   display: flex;
   justify-content: space-around;
@@ -186,15 +180,30 @@ button {
   color: black;
   text-align: center;
 }
-
 .card ul {
   background-color: lightgrey;
   opacity: 0.7;
   border-radius: 1rem;
 }
-
 .card ul li {
   list-style: none;
+}
+/*change card color*/
+.card.blonde {
+  background-color: #feba01;
+  background-image: url("./Images/Beer-blonde.png");
+}
+.card.brunes {
+  background-color: #a32800;
+  background-image: url("./Images/Beer-brunes.png");
+}
+.card.ambre {
+  background-color: #d24f01;
+  background-image: url("./Images/Beer-ambre.png");
+}
+.card.noires {
+  background-color: #1b0303;
+  background-image: url("./Images/Beer-noir.png");
 }
 @media screen and (max-width: 800px) {
   .firstMenu {
