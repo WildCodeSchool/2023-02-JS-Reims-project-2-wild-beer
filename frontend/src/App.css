@@ -59,10 +59,10 @@ nav img {
 }
 .home img{
   width: 30vh;
-  
 }
 .home p{
   font-size: 30px;
+  color: black;
 }
 /*.containerMenu {
   display: flex;
