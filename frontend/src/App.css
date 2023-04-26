@@ -135,13 +135,6 @@ button {
   font-size: large;
 }
 
-@media screen and (min-width: 1200px) {
-  .listRules {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
 /* API Fetch */
 .containertest {
   display: flex;
@@ -203,6 +196,36 @@ button {
 .card ul li {
   list-style: none;
 }
+
+/*Score*/
+.scoreBoard {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  font-size: 1.6rem;
+}
+
+.scoreBoard-name {
+  padding: 1rem;
+  text-align: center;
+  background-color: #ad1a1ac1;
+  border-radius: 10rem;
+}
+
+.scoreBoard-controls-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .listRules {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
