@@ -196,6 +196,18 @@ button {
 .card ul li {
   list-style: none;
 }
+
+/*Board*/
+.div-name-player {
+  display: flex;
+  justify-content: center;
+}
+
+.name-player {
+  background-color: #ad1a1adb;
+  padding: 1rem;
+  border-radius: 10rem;
+}
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
