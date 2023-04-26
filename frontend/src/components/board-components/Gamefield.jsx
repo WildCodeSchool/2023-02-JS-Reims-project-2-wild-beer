@@ -7,7 +7,7 @@ import Hand from "./Hand";
 function Gamefield() {
   const [cardList, setCardList] = useState([]);
   const [cardOnField, setCardOnField] = useState([]);
-  const [cardSelect, setCardSelect] = useState(0);
+  const [cardSelect, setCardSelect] = useState(-1);
 
   const changeCardSelect = (idCard) => {
     setCardSelect(idCard);
