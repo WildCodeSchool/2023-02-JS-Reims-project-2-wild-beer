@@ -27,6 +27,11 @@ function Rules() {
         <li>
           Celui qui possède le plus de point apéro en fin de partie gagne.
         </li>
+
+        <li>
+          Description caractéristiques: IBU = amertume, ABV = degré d'alcool,
+          EBC = indice de couleur, SRM = transparence.
+        </li>
       </ul>
     </section>
   );

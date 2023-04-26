@@ -135,19 +135,13 @@ button {
   font-size: large;
 }
 
-@media screen and (min-width: 1200px) {
-  .listRules {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
 /* API Fetch */
 .containertest {
   display: flex;
   flex-direction: center;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 .container {
   display: flex;
@@ -163,8 +157,8 @@ button {
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 250px;
   border-radius: 1rem;
   background-color: #f4b324;
   box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 6px;
@@ -175,6 +169,12 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card:hover {
+  width: 200px;
+  height: 300px;
+  font-size: 25px;
 }
 
 .card h1 {
@@ -196,11 +196,62 @@ button {
 .card ul li {
   list-style: none;
 }
+
+/*Score*/
+.scoreBoard {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  font-size: 1.6rem;
+}
+
+.scoreBoard-name {
+  padding: 1rem;
+  text-align: center;
+  background-color: #ad1a1ac1;
+  border-radius: 10rem;
+}
+
+.scoreBoard-controls-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .listRules {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
   }
   .inputFirstMenu {
     max-width: 18rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card:hover {
+    height: 250px;
+    width: 180px;
+    font-size: 15px;
+    z-index: 1;
+  }
+  .card {
+    height: 170px;
+    width: 120px;
+    font-size: 10px;
+    bottom: 0;
+    position: relative;
+    margin-right: -100px;
+  }
+  .containertest {
+    gap: 2rem;
+    margin-right: 7rem;
   }
 }
