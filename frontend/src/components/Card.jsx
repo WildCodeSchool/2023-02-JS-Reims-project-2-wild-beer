@@ -22,17 +22,13 @@ function Card({
   };
   return (
     <>
-      <section
+      <button
+        type="button"
         className={`card ${getColorClassName()}`}
         key={card.id}
         onClick={() => {
           changeCardSelect(card.id);
         }}
-        onKeyDown={() => {
-          changeCardSelect(card.id);
-        }}
-        role="button"
-        tabIndex={card.id}
       >
         <h1>{card.name}</h1>
         <ul>
@@ -41,7 +37,7 @@ function Card({
           <li>IBU : {card.ibu}</li>
           <li>SRM : {card.srm}</li>
         </ul>
-      </section>
+      </button>
       {cardSelect === card.id && isPlayed && (
         <button
           className="button-play"
