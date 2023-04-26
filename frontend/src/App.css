@@ -204,3 +204,43 @@ button {
     max-width: 18rem;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .containertest {
+    margin-right: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .card {
+    width: 100px;
+    height: 150px;
+    font-size: 11px;
+    position: absolute;
+    transform: rotateZ("angle");
+    bottom: 0;
+  }
+  .Card :nth-child(2) {
+    z-index: auto;
+  }
+  .Card :nth-child(3) {
+    z-index: auto;
+  }
+  .Card :nth-child(4) {
+    z-index: auto;
+  }
+  .Card :nth-child(5) {
+    z-index: auto;
+  }
+
+  .card:active {
+    width: 200px;
+    height: 300px;
+    font-size: 15px;
+    z-index: 1;
+  }
+  .rules li {
+    font-size: 11px;
+  }
+}
