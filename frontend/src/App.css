@@ -45,18 +45,33 @@ nav img {
 }
 
 /*First Menu*/
-
-.containerMenu {
-  background-image: url("./Images/beer_bar.jpeg");
+.background {
+  background-image: url("./Images/bir_bar.jpeg");
   background-size: cover;
-  width: 200vh;
+}
+.home{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+.home img{
+  width: 30vh;
+  
+}
+.home p{
+  font-size: 30px;
+}
+/*.containerMenu {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
   min-height: 100vh;
-}
+}*/
 .firstMenu {
   display: flex;
   justify-content: center;
