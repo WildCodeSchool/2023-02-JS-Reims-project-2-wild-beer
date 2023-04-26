@@ -12,6 +12,7 @@ function Hand() {
         console.info(data.slice(0, 5));
       });
   }, []);
+
   return (
     <ul className="containertest">
       {cardList.map((card) => (
