@@ -44,7 +44,7 @@ nav img {
   background-image: url("./Images/bir_bar.jpeg");
   background-size: cover;
 }
-.home{
+.home {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,10 +52,10 @@ nav img {
   gap: 2rem;
   padding-top: 3rem;
 }
-.home img{
+.home img {
   width: 30vh;
 }
-.home p{
+.home p {
   font-size: 30px;
   color: black;
 }
@@ -248,7 +248,6 @@ button {
 }
 
 @media screen and (max-width: 700px) {
-
   .containertest {
     margin-right: 25%;
     display: flex;
@@ -285,6 +284,7 @@ button {
   }
   .rules li {
     font-size: 11px;
+  }
 
   .card:hover {
     height: 250px;
