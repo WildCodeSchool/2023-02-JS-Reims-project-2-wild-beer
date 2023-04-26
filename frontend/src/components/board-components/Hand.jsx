@@ -3,6 +3,11 @@ import Card from "../Card";
 
 function Hand() {
   const [cardList, setCardList] = useState([]);
+  const [cardSelect, setCardSelect] = useState(6);
+
+  const changeCardSelect = (idCard) => {
+    setCardSelect(idCard);
+  };
   /* This is fetch API */
   useEffect(() => {
     fetch("https://api.punkapi.com/v2/beers?brewed_before=11-2012&abv_gt=6")
@@ -12,11 +17,16 @@ function Hand() {
         console.info(data.slice(0, 5));
       });
   }, []);
+
   return (
     <ul className="containertest">
       {cardList.map((card) => (
         <li key={card.id}>
-          <Card card={card} />
+          <Card
+            card={card}
+            cardSelect={cardSelect}
+            changeCardSelect={changeCardSelect}
+          />
         </li>
       ))}
       ;
