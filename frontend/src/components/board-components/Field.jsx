@@ -3,6 +3,7 @@ import Card from "../Card";
 
 function Field({
   cardOnField,
+  cardOnFieldEnemy,
   cardSelect,
   changeCardSelect,
   putCardOnField,
@@ -23,6 +24,17 @@ function Field({
         </li>
       ))}
       <h1>VS</h1>
+      {cardOnFieldEnemy.map((card) => (
+        <li key={card.id}>
+          <Card
+            card={card}
+            cardSelect={cardSelect}
+            changeCardSelect={changeCardSelect}
+            putCardOnField={putCardOnField}
+            isPlayed={isPlayed}
+          />
+        </li>
+      ))}
       <div>emplacement 2</div>
     </section>
   );
@@ -30,6 +42,16 @@ function Field({
 
 Field.propTypes = {
   cardOnField: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      abv: PropTypes.number.isRequired,
+      ibu: PropTypes.number.isRequired,
+      ebc: PropTypes.number.isRequired,
+      srm: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+  cardOnFieldEnemy: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,

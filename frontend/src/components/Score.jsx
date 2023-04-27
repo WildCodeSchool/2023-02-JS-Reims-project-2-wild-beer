@@ -25,7 +25,7 @@ function Score() {
         </button>
       </div>
       <div className="scoreBoard-name">
-        Player Two
+        Renaud
         <div>{twoPlayerScore}</div>
         <button
           type="button"

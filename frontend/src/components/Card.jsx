@@ -29,7 +29,10 @@ function Card({
 
   const getColorClassName = () => {
     let colorClassName = "";
-    if (ebc <= 15) {
+
+    if (ebc <= 10) {
+      colorClassName = "blanche";
+    } else if (ebc <= 20) {
       colorClassName = "blonde";
     } else if (ebc <= 30) {
       colorClassName = "ambre";
