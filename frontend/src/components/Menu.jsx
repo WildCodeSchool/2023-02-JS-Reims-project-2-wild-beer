@@ -6,15 +6,14 @@ function Menu() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p>Decouvre le monde zythologie</p>
+        <p className="home-p">Decouvre le monde zythologie</p>
         <section className="containerMenu">
           <form className="firstMenu">
             <label>
               Quelle est votre pseudo ?
               <input type="text" className="inputFirstMenu" />
             </label>
-
-            <Link to="/wild-beer-gaming">
+            <Link to="/Menu/wild-beer-gaming">
               <button type="button" className="buttonFirstMenu">
                 Jouer
               </button>
