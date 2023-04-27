@@ -27,10 +27,23 @@ nav img {
 .navbar_logo {
   width: 7rem;
 }
+@keyframes animation-navbar-button {
+  0% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+
 .navbar_button {
   background-color: transparent;
   border-radius: 9rem;
   box-shadow: 5px 5px 5px black;
+  animation: animation-navbar-button 4s infinite;
 }
 .App {
   background-image: url("./assets/img/background-wood.jpg");
@@ -57,7 +70,7 @@ nav img {
 }
 .home p {
   font-size: 30px;
-  color: black;
+  color: white;
 }
 /*.containerMenu {
   display: flex;
@@ -103,7 +116,7 @@ nav img {
   font-size: 2rem;
   border: #422c24 solid;
 }
-button {
+.buttonFirstMenu {
   font-size: calc(10px + 2vmin);
 }
 
@@ -163,7 +176,6 @@ button {
   height: 250px;
   border-radius: 1rem;
   background-color: #f4b324;
-  box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 3px;
   background-image: url("./Images/WildBeer.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -171,11 +183,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
 }
 .card:hover {
-  width: 200px;
-  height: 300px;
-  font-size: 25px;
+  scale: 1.2;
+  transition: 0.2s all ease-in-out;
 }
 .card h1 {
   display: flex;
@@ -193,19 +205,26 @@ button {
 }
 .card ul li {
   list-style: none;
+  text-align: left;
 }
 /*change card color*/
+
+.card.blanche {
+  background-color: #07a5c3;
+  background-image: url("./Images/Biere-blanche.png");
+}
+
 .card.blonde {
-  background-color: #feba01;
-  background-image: url("./Images/Beer-blonde.png");
+  background-color: #e1c17a;
+  background-image: url("./Images/Biere-blonde.png");
 }
 .card.brunes {
-  background-color: #a32800;
-  background-image: url("./Images/Beer-brunes.png");
+  background-color: #18706a;
+  background-image: url("./Images/Biere-brune.png");
 }
 .card.ambre {
-  background-color: #d24f01;
-  background-image: url("./Images/Beer-ambre.png");
+  background-color: #a32800;
+  background-image: url("./Images/Biere-ambrée.png");
 }
 .card.noires {
   background-color: #1b0303;
@@ -265,5 +284,9 @@ button {
   .containertest {
     gap: 2rem;
     margin-right: 7rem;
+  }
+  .home p {
+    font-size: larger;
+    color: white;
   }
 }
