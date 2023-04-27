@@ -248,6 +248,7 @@ nav img {
 .warField {
   margin-top: 2rem;
 }
+
 @media screen and (min-width: 1200px) {
   .listRules {
     top: 50%;
