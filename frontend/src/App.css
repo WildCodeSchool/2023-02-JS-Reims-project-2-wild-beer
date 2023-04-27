@@ -205,6 +205,7 @@ nav img {
 }
 .card ul li {
   list-style: none;
+  text-align: left;
 }
 /*change card color*/
 .card.blonde {
