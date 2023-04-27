@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 function Score() {
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
-  const userName = useParams();
+  const { userName } = useParams();
 
   return (
     <div className="scoreBoard">
       <div className="scoreBoard-name">
-        {userName.id}
+        {userName.username}
         <div>{onePlayerScore}</div>
         <button
           type="button"
