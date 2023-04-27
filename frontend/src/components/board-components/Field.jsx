@@ -1,18 +1,17 @@
-import React from "react";
-
 import PropTypes from "prop-types";
 import Card from "../Card";
 
-function Hand({
-  cardList,
-  putCardOnField,
+function Field({
+  cardOnField,
   cardSelect,
   changeCardSelect,
+  putCardOnField,
   isPlayed,
 }) {
   return (
-    <ul className="containertest">
-      {cardList.map((card) => (
+    <section className="warField">
+      <div>emplacement 1</div>
+      {cardOnField.map((card) => (
         <li key={card.id}>
           <Card
             card={card}
@@ -23,13 +22,14 @@ function Hand({
           />
         </li>
       ))}
-      ;
-    </ul>
+      <h1>VS</h1>
+      <div>emplacement 2</div>
+    </section>
   );
 }
 
-Hand.propTypes = {
-  cardList: PropTypes.arrayOf(
+Field.propTypes = {
+  cardOnField: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -39,10 +39,10 @@ Hand.propTypes = {
       srm: PropTypes.number.isRequired,
     }).isRequired
   ).isRequired,
-  putCardOnField: PropTypes.func.isRequired,
   cardSelect: PropTypes.number.isRequired,
   changeCardSelect: PropTypes.func.isRequired,
+  putCardOnField: PropTypes.func.isRequired,
   isPlayed: PropTypes.bool.isRequired,
 };
 
-export default Hand;
+export default Field;

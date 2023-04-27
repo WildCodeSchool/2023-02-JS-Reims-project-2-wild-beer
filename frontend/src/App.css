@@ -30,10 +30,23 @@ nav img {
 .navbar_logo {
   width: 7rem;
 }
+@keyframes animation-navbar-button {
+  0% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+
 .navbar_button {
   background-color: transparent;
   border-radius: 9rem;
   box-shadow: 5px 5px 5px black;
+  animation: animation-navbar-button 4s infinite;
 }
 .App {
   background-image: url("./assets/img/background-wood.jpg");
@@ -106,7 +119,7 @@ nav img {
   font-size: 2rem;
   border: #422c24 solid;
 }
-button {
+.buttonFirstMenu {
   font-size: calc(10px + 2vmin);
 }
 
@@ -176,9 +189,8 @@ button {
   justify-content: space-between;
 }
 .card:hover {
-  width: 200px;
-  height: 300px;
-  font-size: 25px;
+  scale: 1.2;
+  transition: 0.2s all ease-in-out;
 }
 .card h1 {
   display: flex;
@@ -196,6 +208,7 @@ button {
 }
 .card ul li {
   list-style: none;
+  text-align: left;
 }
 /*change card color*/
 .card.blonde {
