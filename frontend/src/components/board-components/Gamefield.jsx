@@ -3,6 +3,7 @@ import Field from "./Field";
 
 import Score from "../Score";
 import Hand from "./Hand";
+import GameRound from "../GameRound";
 
 function Gamefield() {
   const [cardList, setCardList] = useState([]);
@@ -64,6 +65,7 @@ function Gamefield() {
         changeCardSelect={changeCardSelect}
         isPlayed
       />
+      <GameRound />
     </div>
   );
 }
