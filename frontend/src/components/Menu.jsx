@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "../Images/wild-beer-logo.png";
 
 function Menu() {
+  const [username, setUsername] = useState("ton pseudo");
+  const handleInput = (e) => {
+    setUsername(e.target.value);
+  };
   return (
     <div className="background">
       <div className="home">
@@ -11,10 +16,15 @@ function Menu() {
           <form className="firstMenu">
             <label>
               Quelle est votre pseudo ?
-              <input type="text" className="inputFirstMenu" />
+              <input
+                value={username}
+                onChange={handleInput}
+                type="text"
+                className="inputFirstMenu"
+              />
             </label>
-
-            <Link to="/wild-beer-gaming">
+            <h1>{username}</h1>
+            <Link to={`/wild-beer-game/${username}`}>
               <button type="button" className="buttonFirstMenu">
                 Jouer
               </button>

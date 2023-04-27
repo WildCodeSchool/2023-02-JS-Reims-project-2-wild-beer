@@ -12,6 +12,9 @@ body {
   padding: 0;
 }
 
+.game-field div {
+  color: #ffffff;
+}
 /**Navbar**/
 .navbar_nav {
   background-color: #ad1a1a;
@@ -249,11 +252,13 @@ button {
 
 @media screen and (max-width: 700px) {
   .containertest {
-    margin-right: 25%;
+    --card-width: 120px;
+    margin-right: calc(var(--card-width) / 2);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 0;
   }
   .card {
     width: 100px;
@@ -294,14 +299,10 @@ button {
   }
   .card {
     height: 170px;
-    width: 120px;
+    width: var(--card-width);
     font-size: 10px;
     bottom: 0;
     position: relative;
     margin-right: -100px;
-  }
-  .containertest {
-    gap: 2rem;
-    margin-right: 7rem;
   }
 }
