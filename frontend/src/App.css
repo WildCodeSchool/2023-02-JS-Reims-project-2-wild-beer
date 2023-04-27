@@ -70,9 +70,16 @@ nav img {
 .home img {
   width: 20rem;
 }
-.home p {
+.home-p {
   font-size: 30px;
   color: black;
+}
+.containerMenu-AgeVerification {
+  font-size: 1.2rem;
+}
+.containerMenu-Mineur {
+  font-size: 1.5rem;
+  text-align: center;
 }
 /*.containerMenu {
   display: flex;
