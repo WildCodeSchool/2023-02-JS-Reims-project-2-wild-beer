@@ -44,7 +44,7 @@ nav img {
   background-image: url("./Images/bir_bar.jpeg");
   background-size: cover;
 }
-.home{
+.home {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,12 +52,12 @@ nav img {
   gap: 2rem;
   padding-top: 3rem;
 }
-.home img{
+.home img {
   width: 30vh;
 }
-.home p{
+.home p {
   font-size: 30px;
-  color: black;
+  color: white;
 }
 /*.containerMenu {
   display: flex;
@@ -163,7 +163,6 @@ button {
   height: 250px;
   border-radius: 1rem;
   background-color: #f4b324;
-  box-shadow: #644a11 0px 1px 6px, #644a11 0px 0px 0px 3px;
   background-image: url("./Images/WildBeer.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -171,6 +170,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
 }
 .card:hover {
   width: 200px;
@@ -195,17 +195,23 @@ button {
   list-style: none;
 }
 /*change card color*/
+
+.card.blanche {
+  background-color: #07a5c3;
+  background-image: url("./Images/Biere-blanche.png");
+}
+
 .card.blonde {
-  background-color: #feba01;
-  background-image: url("./Images/Beer-blonde.png");
+  background-color: #e1c17a;
+  background-image: url("./Images/Biere-blonde.png");
 }
 .card.brunes {
-  background-color: #a32800;
-  background-image: url("./Images/Beer-brunes.png");
+  background-color: #18706a;
+  background-image: url("./Images/Biere-brune.png");
 }
 .card.ambre {
-  background-color: #d24f01;
-  background-image: url("./Images/Beer-ambre.png");
+  background-color: #a32800;
+  background-image: url("./Images/Biere-ambrée.png");
 }
 .card.noires {
   background-color: #1b0303;
@@ -265,5 +271,9 @@ button {
   .containertest {
     gap: 2rem;
     margin-right: 7rem;
+  }
+  .home p {
+    font-size: larger;
+    color: white;
   }
 }

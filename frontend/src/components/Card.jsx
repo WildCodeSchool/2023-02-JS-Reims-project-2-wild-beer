@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 function Card({ card }) {
   const getColorClassName = () => {
     let colorClassName = "";
-    if (card.ebc <= 20) {
+    if (card.ebc <= 10) {
+      colorClassName = "blanche";
+    } else if (card.ebc <= 20) {
       colorClassName = "blonde";
     } else if (card.ebc <= 30) {
       colorClassName = "ambre";
