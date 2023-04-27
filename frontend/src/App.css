@@ -250,6 +250,7 @@ button {
   background-color: #ad1a1adb;
   padding: 1rem;
   border-radius: 10rem;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 800px) {
   .firstMenu {
