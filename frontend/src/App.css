@@ -19,10 +19,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 2rem;
   box-shadow: 5px 5px 5px black;
 }
 nav img {
-  width: 2rem;
+  width: 1rem;
 }
 .navbar_logo {
   width: 7rem;
@@ -244,6 +245,9 @@ nav img {
   font-size: 1.5rem;
 }
 
+.warField {
+  margin-top: 2rem;
+}
 @media screen and (min-width: 1200px) {
   .listRules {
     top: 50%;
@@ -262,8 +266,8 @@ nav img {
 
 @media screen and (max-width: 700px) {
   .card:hover {
-    height: 250px;
-    width: 180px;
+    height: 220px;
+    width: 150px;
     font-size: 15px;
     z-index: 1;
   }
