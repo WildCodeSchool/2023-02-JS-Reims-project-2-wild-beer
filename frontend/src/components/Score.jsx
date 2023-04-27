@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Score() {
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
+  const userName = useParams();
 
   return (
     <div className="scoreBoard">
       <div className="scoreBoard-name">
-        Player One
+        {userName.id}
         <div>{onePlayerScore}</div>
         <button
           type="button"
@@ -25,7 +27,7 @@ function Score() {
         </button>
       </div>
       <div className="scoreBoard-name">
-        Player Two
+        Renaud
         <div>{twoPlayerScore}</div>
         <button
           type="button"
