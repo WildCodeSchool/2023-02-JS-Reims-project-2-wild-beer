@@ -20,12 +20,15 @@ body {
   align-items: center;
   padding: 1rem;
   box-shadow: 5px 5px 5px black;
+  height: 1rem;
 }
+
 nav img {
-  width: 2rem;
+  width: 1.5rem;
 }
+
 .navbar_logo {
-  width: 7rem;
+  width: 6.8rem;
 }
 @keyframes animation-navbar-button {
   0% {
@@ -237,6 +240,7 @@ nav img {
   text-align: center;
   background-color: #ad1a1ac1;
   border-radius: 10rem;
+  font-size: 1.5rem;
 }
 .scoreBoard-controls-button {
   border: none;
