@@ -223,6 +223,7 @@ button {
   padding: 1rem;
   text-align: center;
   background-color: #ad1a1ac1;
+  width: 8rem;
   border-radius: 10rem;
 }
 .scoreBoard-controls-button {
