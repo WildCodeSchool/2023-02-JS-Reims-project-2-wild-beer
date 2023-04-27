@@ -12,7 +12,7 @@ function Menu() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p>Decouvre le monde zythologie</p>
+        <p>Decouvre le monde de la zythologie</p>
         <section className="containerMenu">
           <form className="firstMenu">
             <label>

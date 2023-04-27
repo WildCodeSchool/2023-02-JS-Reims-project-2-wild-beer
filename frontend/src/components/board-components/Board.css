@@ -1,6 +1,6 @@
 .game-field {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
@@ -10,4 +10,24 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.button-play {
+  text-align: center;
+  min-width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  font-family: "Virgil";
+  box-shadow: 5px 5px 5px black;
+  margin-top: 2rem;
+}
+
+.warField {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+li {
+  list-style-type: none;
 }
