@@ -10,6 +10,7 @@ function Field({
 }) {
   return (
     <section className="warField">
+      <div>emplacement 1</div>
       {cardOnField.map((card) => (
         <li key={card.id}>
           <Card
@@ -22,6 +23,7 @@ function Field({
         </li>
       ))}
       <h1>VS</h1>
+      <div>emplacement 2</div>
     </section>
   );
 }

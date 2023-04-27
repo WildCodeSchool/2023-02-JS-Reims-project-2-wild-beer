@@ -261,7 +261,7 @@ nav img {
 }
 
 @media screen and (max-width: 700px) {
-  .card:active {
+  .card:hover {
     height: 250px;
     width: 180px;
     font-size: 15px;
