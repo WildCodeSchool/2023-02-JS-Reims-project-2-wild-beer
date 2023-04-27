@@ -44,7 +44,7 @@ nav img {
   background-image: url("./Images/bir_bar.jpeg");
   background-size: cover;
 }
-.home{
+.home {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,10 +52,10 @@ nav img {
   gap: 2rem;
   padding-top: 3rem;
 }
-.home img{
+.home img {
   width: 30vh;
 }
-.home p{
+.home p {
   font-size: 30px;
   color: black;
 }
@@ -222,7 +222,7 @@ button {
 .scoreBoard-name {
   padding: 1rem;
   text-align: center;
-  background-color: #ad1a1ac1;
+  background-color: transparent;
   border-radius: 10rem;
 }
 .scoreBoard-controls-button {
