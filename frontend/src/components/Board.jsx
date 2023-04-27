@@ -11,7 +11,7 @@ function Board() {
       <Navbar />
       <Gamefield />
       <div className="div-name-player">
-        <h1 className="name-player">{userName.id}</h1>
+        <h2 className="name-player">{userName.id}</h2>
       </div>
     </div>
   );
