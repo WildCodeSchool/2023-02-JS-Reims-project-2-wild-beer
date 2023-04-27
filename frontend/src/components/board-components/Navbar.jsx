@@ -16,8 +16,8 @@ function Navbar() {
     <nav className="navbar_nav">
       <button type="button" className="navbar_button" onClick={showMeTheRules}>
         <img src={regleInterrogation} alt="règles" />
-        {rules && <Rules />}
       </button>
+      {rules && <Rules />}
       <img src={Logo} alt="Wild Beer" className="navbar_logo" />
 
       <Link to="/">
