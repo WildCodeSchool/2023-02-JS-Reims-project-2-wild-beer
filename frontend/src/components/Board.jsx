@@ -5,7 +5,10 @@ import Gamefield from "./board-components/Gamefield";
 import "./board-components/Board.css";
 
 function Board() {
-  const { username } = useParams();
+  let { username } = useParams();
+  if (username === undefined) {
+    username = "Player";
+  }
   return (
     <div className="main-board">
       <Navbar />
