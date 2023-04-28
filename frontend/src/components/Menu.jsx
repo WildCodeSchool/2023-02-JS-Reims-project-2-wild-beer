@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/wild-beer-logo.png";
 
 function Menu() {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
   return (
     <div className="background">
       <div className="home">
@@ -11,7 +17,12 @@ function Menu() {
           <form className="firstMenu">
             <label>
               Quelle est votre pseudo ?
-              <input type="text" className="inputFirstMenu" />
+              <input
+                type="text"
+                className="inputFirstMenu"
+                value={inputValue}
+                onChange={handleChange}
+              />
             </label>
             <Link to="/Menu/wild-beer-gaming">
               <button type="button" className="buttonFirstMenu">

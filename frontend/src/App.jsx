@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AgeVerification />} />
         <Route path="/Menu" element={<Menu />} />
-        <Route path="/Menu/wild-beer-gaming" element={<Board />} />
+        <Route path="/Menu/wild-beer-gaming/:username" element={<Board />} />
         <Route path="/Mineur" element={<Mineur />} />
       </Routes>
     </div>

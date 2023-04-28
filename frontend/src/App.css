@@ -251,6 +251,7 @@ nav img {
   padding: 1rem;
   text-align: center;
   background-color: #ad1a1ac1;
+  width: 8rem;
   border-radius: 10rem;
   font-size: 1.5rem;
 }
@@ -266,6 +267,19 @@ nav img {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+/*Board*/
+.div-name-player {
+  display: flex;
+  justify-content: center;
+}
+
+.name-player {
+  background-color: #ad1a1adb;
+  padding: 1rem;
+  border-radius: 10rem;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 800px) {
   .firstMenu {
