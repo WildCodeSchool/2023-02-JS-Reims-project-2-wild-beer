@@ -24,7 +24,7 @@ function Menu() {
                 onChange={handleChange}
               />
             </label>
-            <Link to="/Menu/wild-beer-gaming">
+            <Link to={`/Menu/wild-beer-gaming/${inputValue}`}>
               <button type="button" className="buttonFirstMenu">
                 Jouer
               </button>
