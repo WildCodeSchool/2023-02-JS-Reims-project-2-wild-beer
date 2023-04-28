@@ -33,10 +33,10 @@ Hand.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      abv: PropTypes.number.isRequired,
-      ibu: PropTypes.number.isRequired,
-      ebc: PropTypes.number.isRequired,
-      srm: PropTypes.number.isRequired,
+      abv: PropTypes.number,
+      ibu: PropTypes.number,
+      ebc: PropTypes.number,
+      srm: PropTypes.number,
     }).isRequired
   ).isRequired,
   putCardOnField: PropTypes.func.isRequired,

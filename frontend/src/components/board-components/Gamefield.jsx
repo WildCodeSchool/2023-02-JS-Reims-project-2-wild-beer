@@ -13,8 +13,9 @@ function Gamefield() {
   const changeCardSelect = (idCard) => {
     setCardSelect(idCard);
   };
+  const randomBeerPage = Math.floor(Math.random() * 66);
   useEffect(() => {
-    fetch("https://api.punkapi.com/v2/beers?brewed_before=11-2012&abv_gt=6")
+    fetch(`https://api.punkapi.com/v2/beers?page=${randomBeerPage}&per_page=5`)
       .then((response) => response.json())
       .then((data) => {
         for (let i = 0; i < 5; i += 1) {
