@@ -4,9 +4,9 @@ function Rounds() {
   const rounds = ["SRM", "IBU", "ABV", "EBC"];
   const [value, setValue] = useState();
 
-  const ChangeRound = (arr) => {
-    const selection = Math.round(Math.random() * (arr.length - 1));
-    setValue(arr[selection]);
+  const changeRound = (arrRounds) => {
+    const round = Math.round(Math.random() * (arrRounds.length - 1));
+    setValue(arrRounds[round]);
   };
 
   return (
@@ -16,7 +16,7 @@ function Rounds() {
         className="buttonRound"
         type="button"
         onClick={() => {
-          ChangeRound(rounds);
+          changeRound(rounds);
         }}
       >
         Jouer
