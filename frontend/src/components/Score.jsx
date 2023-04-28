@@ -4,7 +4,10 @@ import { useParams } from "react-router-dom";
 function Score() {
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
-  const { username } = useParams();
+  let { username } = useParams();
+  if (username === undefined) {
+    username = "Player";
+  }
 
   return (
     <div className="scoreBoard">

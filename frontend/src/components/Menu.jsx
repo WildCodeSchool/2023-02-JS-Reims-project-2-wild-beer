@@ -12,7 +12,7 @@ function Menu() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p>Decouvre le monde de la zythologie</p>
+        <p className="home-p">Decouvre le monde de la zythologie</p>
         <section className="containerMenu">
           <form className="firstMenu">
             <label>
@@ -24,7 +24,7 @@ function Menu() {
                 onChange={handleChange}
               />
             </label>
-            <Link to={`/wild-beer-gaming/${inputValue}`}>
+            <Link to={`/Menu/wild-beer-gaming/${inputValue}`}>
               <button type="button" className="buttonFirstMenu">
                 Jouer
               </button>
