@@ -26,11 +26,13 @@ body {
   padding: 0.1rem;
   box-shadow: 5px 5px 5px black;
 }
+
 nav img {
   width: 1.5rem;
 }
+
 .navbar_logo {
-  width: 7rem;
+  width: 6.8rem;
 }
 
 @keyframes animation-navbar-button {
@@ -70,15 +72,21 @@ nav img {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  gap: 2rem;
-  padding-top: 3rem;
+  gap: 0.8rem;
 }
 .home img {
-  width: 30vh;
+  width: 20rem;
 }
-.home p {
+.home-p {
   font-size: 30px;
   color: white;
+}
+.containerMenu-AgeVerification {
+  font-size: 1.2rem;
+}
+.containerMenu-Mineur {
+  font-size: 1.5rem;
+  text-align: center;
 }
 /*.containerMenu {
   display: flex;
@@ -259,6 +267,7 @@ nav img {
   background-color: #ad1a1ac1;
   width: 8rem;
   border-radius: 10rem;
+  font-size: 1.5rem;
 }
 .scoreBoard-controls-button {
   border: none;
