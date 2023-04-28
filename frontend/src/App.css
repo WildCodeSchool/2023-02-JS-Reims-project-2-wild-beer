@@ -18,15 +18,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.1rem;
   box-shadow: 5px 5px 5px black;
 }
 nav img {
-  width: 2rem;
+  width: 1.5rem;
 }
 .navbar_logo {
   width: 7rem;
 }
+
 @keyframes animation-navbar-button {
   0% {
     scale: 1.2;
@@ -44,6 +45,8 @@ nav img {
   border-radius: 9rem;
   box-shadow: 5px 5px 5px black;
   animation: animation-navbar-button 4s infinite;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .App {
   background-image: url("./assets/img/background-wood.jpg");
@@ -187,6 +190,7 @@ nav img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: "Virgil";
   box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
 }
 .card:hover {
@@ -255,6 +259,10 @@ nav img {
   font-size: 1.5rem;
 }
 
+.warField {
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 1200px) {
   .listRules {
     top: 50%;
@@ -286,8 +294,8 @@ nav img {
 
 @media screen and (max-width: 700px) {
   .card:hover {
-    height: 250px;
-    width: 180px;
+    height: 220px;
+    width: 150px;
     font-size: 15px;
     z-index: 1;
   }
@@ -302,6 +310,9 @@ nav img {
   .containertest {
     gap: 2rem;
     margin-right: 7rem;
+  }
+  .rules li {
+    font-size: 10px;
   }
   .home p {
     font-size: larger;
