@@ -59,7 +59,7 @@ nav img {
 
 /*First Menu*/
 .background {
-  background-image: url("./Images/bir_bar.jpeg");
+  background-image: url("./Images/bar.jpeg");
   background-size: cover;
 }
 .home {
@@ -159,8 +159,10 @@ nav img {
 }
 .rules li {
   font-size: large;
+  display: flex;
+  align-items: center;
 }
-.rules li img{
+.rules li img {
   width: 1rem;
   margin-right: 0.5rem;
 }
