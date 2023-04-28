@@ -20,7 +20,7 @@ function Navbar() {
       {rules && <Rules />}
       <img src={Logo} alt="Wild Beer" className="navbar_logo" />
 
-      <Link to="/">
+      <Link to="/menu">
         <button type="button" className="navbar_button">
           <img src={homeAccueil} alt="accueil" />
         </button>
