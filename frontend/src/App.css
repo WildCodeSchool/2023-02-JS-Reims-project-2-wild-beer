@@ -185,6 +185,7 @@ nav img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Virgil";
 }
 .card:hover {
   scale: 1.2;
