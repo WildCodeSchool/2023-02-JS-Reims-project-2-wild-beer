@@ -4,7 +4,7 @@ import Hand from "./Hand";
 
 function Gamefield() {
   const [cardList, setCardList] = useState([]);
-  const [cardListOrigin, setCardListOrigin] = useState([]);
+  /* const [cardListOrigin, setCardListOrigin] = useState([]); */
   const [cardOnField, setCardOnField] = useState([]);
   const [cardSelect, setCardSelect] = useState(-1);
 
@@ -24,7 +24,7 @@ function Gamefield() {
           Object.defineProperty(data[i], "id", { value: i });
         }
         setCardList(data.slice(0, 5));
-        setCardListOrigin(data.slice(0, 5));
+        /* setCardListOrigin(data.slice(0, 5)); */
       });
   }, []);
 
@@ -41,7 +41,7 @@ function Gamefield() {
       };
     };
 
-    const { newCardList, newCardOnField } = cardListOrigin.reduce(cleanTable, {
+    const { newCardList, newCardOnField } = cardList.reduce(cleanTable, {
       newCardList: [],
       newCardOnField: [],
     });
