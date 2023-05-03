@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Rounds() {
+function Round() {
   const rounds = ["SRM", "IBU", "ABV", "EBC"];
   const [value, setValue] = useState();
 
@@ -25,4 +25,4 @@ function Rounds() {
   );
 }
 
-export default Rounds;
+export default Round;
