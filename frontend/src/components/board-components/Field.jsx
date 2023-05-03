@@ -23,6 +23,9 @@ function Field({
   if (username === undefined) {
     username = "Player";
   }
+  if (username.length > 15) {
+    username = username.slice(0, 15);
+  }
 
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
