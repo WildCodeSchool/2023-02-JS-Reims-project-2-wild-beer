@@ -6,17 +6,20 @@ function Menu() {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
-    setInputValue(event.target.value);
+    const regex = /^[a-zA-Zé-]{0,15}$/;
+    if (regex.test(event.target.value)) {
+      setInputValue(event.target.value);
+    }
   };
   return (
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p className="home-p">Decouvre le monde de la zythologie</p>
+        <p className="home-p home-p-menu">Découvre le monde de la zythologie</p>
         <section className="containerMenu">
           <form className="firstMenu">
             <label>
-              Quelle est votre pseudo ?
+              Entrez votre pseudo de Zythologue Amateur
               <input
                 type="text"
                 className="inputFirstMenu"
