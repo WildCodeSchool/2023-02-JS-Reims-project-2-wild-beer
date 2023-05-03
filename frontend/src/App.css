@@ -23,7 +23,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem;
   box-shadow: 5px 5px 5px black;
 }
 
@@ -220,11 +219,13 @@ nav img {
   border-radius: 1rem;
   color: black;
   text-align: center;
+  width: 100%;
 }
 .card ul {
   background-color: lightgrey;
   opacity: 0.7;
   border-radius: 1rem;
+  width: 100%;
 }
 .card ul li {
   list-style: none;
@@ -273,10 +274,6 @@ nav img {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
-}
-
-.warField {
-  margin-top: 2rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -342,5 +339,8 @@ nav img {
   .home p {
     font-size: larger;
     color: white;
+  }
+  .warField {
+    width: 100%;
   }
 }

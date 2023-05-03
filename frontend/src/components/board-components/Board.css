@@ -24,8 +24,8 @@
 
 .warField {
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
+  gap: 4rem;
+  margin-top: 2rem;
 }
 
 li {
