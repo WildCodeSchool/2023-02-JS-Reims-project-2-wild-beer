@@ -13,27 +13,25 @@ function Field({
     <section className="warField">
       <div>emplacement 1</div>
       {cardOnField.map((card) => (
-        <li key={card.id}>
-          <Card
-            card={card}
-            cardSelect={cardSelect}
-            changeCardSelect={changeCardSelect}
-            putCardOnField={putCardOnField}
-            isPlayed={isPlayed}
-          />
-        </li>
+        <Card
+          key={card.id}
+          card={card}
+          cardSelect={cardSelect}
+          changeCardSelect={changeCardSelect}
+          putCardOnField={putCardOnField}
+          isPlayed={isPlayed}
+        />
       ))}
       <h1>VS</h1>
       {enemyCard.map((card) => (
-        <li key={card.id}>
-          <Card
-            card={card}
-            cardSelect={cardSelect}
-            changeCardSelect={changeCardSelect}
-            putCardOnField={putCardOnField}
-            isPlayed={isPlayed}
-          />
-        </li>
+        <Card
+          key={card.id}
+          card={card}
+          cardSelect={cardSelect}
+          changeCardSelect={changeCardSelect}
+          putCardOnField={putCardOnField}
+          isPlayed={isPlayed}
+        />
       ))}
       <div>emplacement 2</div>
     </section>

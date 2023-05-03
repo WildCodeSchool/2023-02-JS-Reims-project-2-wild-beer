@@ -50,9 +50,6 @@ function Gamefield() {
       .then((response) => response.json())
       .then((data) => {
         setEnemyCard(data);
-      })
-      .then(() => {
-        console.info(enemyCard);
       });
 
     setCardOnField(newCardOnField);
