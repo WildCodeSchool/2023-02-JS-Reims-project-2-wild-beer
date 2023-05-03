@@ -24,6 +24,7 @@ function Field({
     username = "Player";
   }
 
+  // compare value bir //
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
       setOnePlayerScore(onePlayerScore + 1);
@@ -35,7 +36,7 @@ function Field({
       setResultRound(`Egalité`);
     }
   };
-
+  // change round random //
   const changeRound = (arrRounds) => {
     const round = Math.round(Math.random() * (arrRounds.length - 1));
     setValue(arrRounds[round]);
@@ -114,30 +115,6 @@ function Field({
         </div>
       </div>
     </>
-    <section className="warField">
-      {cardOnField.map((card) => (
-        <Card
-          key={card.id}
-          card={card}
-          cardSelect={cardSelect}
-          changeCardSelect={changeCardSelect}
-          putCardOnField={putCardOnField}
-          isPlayed={isPlayed}
-        />
-      ))}
-      <h1>VS</h1>
-      <input type="text" onChange={handleRound} />
-      {enemyCard.map((card) => (
-        <Card
-          key={card.id}
-          card={card}
-          cardSelect={cardSelect}
-          changeCardSelect={changeCardSelect}
-          putCardOnField={putCardOnField}
-          isPlayed={isPlayed}
-        />
-      ))}
-    </section>
   );
 }
 
