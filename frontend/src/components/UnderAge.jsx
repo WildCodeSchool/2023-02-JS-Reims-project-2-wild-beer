@@ -6,7 +6,7 @@ function Mineur() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p className="home-p">Decouvre le monde zythologie</p>
+        <p className="home-p">Decouvre le monde de la zythologie</p>
         <section className="containerMenu containerMenu-Mineur">
           <form className="firstMenu">
             <p>

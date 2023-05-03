@@ -265,11 +265,16 @@ nav img {
 .scoreBoard-name {
   padding: 1rem;
   text-align: center;
-  background-color: #ad1a1a;
-  width: 5rem;
   border-radius: 50%;
   font-size: 1.5rem;
   box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-image: url(../src/Images/wild-beer-logo-opacity.png);
+  background-size: 7rem;
+  background-color: #ad1a1a;
+  background-position: center;
+  color: black;
 }
 .scoreBoard-controls-button {
   border: none;
