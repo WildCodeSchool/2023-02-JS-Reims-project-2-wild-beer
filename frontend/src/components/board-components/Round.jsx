@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-function Round() {
+function Round({ value, changeRound, cardOnField, enemyCard, checkRound }) {
   const rounds = ["SRM", "IBU", "ABV", "EBC"];
-  const [value, setValue] = useState();
-
-  const changeRound = (arrRounds) => {
-    const round = Math.round(Math.random() * (arrRounds.length - 1));
-    setValue(arrRounds[round]);
-  };
 
   return (
     <>
-      <h1 className="showRound">Round {value}</h1>
+      <h1 className="showRound">{value}</h1>
+      <h1>VS</h1>
+      {cardOnField[0] !== undefined && enemyCard[0] !== undefined && (
+        <button
+          className="buttonRound"
+          type="button"
+          onClick={() => {
+            changeRound(rounds);
+          }}
+        >
+          Change Round
+        </button>
+      )}
       <button
         className="buttonRound"
         type="button"
         onClick={() => {
-          changeRound(rounds);
+          checkRound(rounds);
         }}
       >
         Jouer
@@ -24,5 +30,31 @@ function Round() {
     </>
   );
 }
+
+Round.propTypes = {
+  value: PropTypes.string.isRequired,
+  changeRound: PropTypes.func.isRequired,
+  cardOnField: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      abv: PropTypes.number,
+      ibu: PropTypes.number,
+      ebc: PropTypes.number,
+      srm: PropTypes.number,
+    }).isRequired
+  ).isRequired,
+  enemyCard: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      abv: PropTypes.number,
+      ibu: PropTypes.number,
+      ebc: PropTypes.number,
+      srm: PropTypes.number,
+    }).isRequired
+  ).isRequired,
+  checkRound: PropTypes.func.isRequired,
+};
 
 export default Round;

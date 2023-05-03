@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import Card from "../Card";
+import Round from "./Round";
 
 function Field({
   cardOnField,
@@ -9,6 +11,8 @@ function Field({
   enemyCard,
   isPlayed,
 }) {
+  const [value, setValue] = useState("EBC");
+
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
       console.info(`${value1} win 1 point`);
@@ -19,24 +23,29 @@ function Field({
     }
   };
 
-  const handleRound = (e) => {
-    switch (e.target.value) {
-      case "ebc":
+  const changeRound = (arrRounds) => {
+    const round = Math.round(Math.random() * (arrRounds.length - 1));
+    setValue(arrRounds[round]);
+  };
+
+  const checkRound = () => {
+    switch (value) {
+      case "EBC":
         console.info(cardOnField[0].ebc);
         console.info(enemyCard[0].ebc);
         compareValue(cardOnField[0].ebc, enemyCard[0].ebc);
         break;
-      case "ibu":
+      case "IBU":
         console.info(cardOnField[0].ibu);
         console.info(enemyCard[0].ibu);
         compareValue(cardOnField[0].ibu, enemyCard[0].ibu);
         break;
-      case "abv":
+      case "ABV":
         console.info(cardOnField[0].abv);
         console.info(enemyCard[0].abv);
         compareValue(cardOnField[0].abv, enemyCard[0].abv);
         break;
-      case "srm":
+      case "SRM":
         console.info(cardOnField[0].srm);
         console.info(enemyCard[0].srm);
         compareValue(cardOnField[0].srm, enemyCard[0].srm);
@@ -58,9 +67,14 @@ function Field({
           isPlayed={isPlayed}
         />
       ))}
-      <div>
-        <h1>VS</h1>
-        <input type="text" onChange={handleRound} />
+      <div className="center-field">
+        <Round
+          value={value}
+          changeRound={changeRound}
+          cardOnField={cardOnField}
+          enemyCard={enemyCard}
+          checkRound={checkRound}
+        />
       </div>
       {enemyCard.map((card) => (
         <Card
