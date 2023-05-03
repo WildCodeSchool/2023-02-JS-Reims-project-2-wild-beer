@@ -10,10 +10,14 @@ function Gamefield() {
   const [cardOnField, setCardOnField] = useState([]);
   const [cardSelect, setCardSelect] = useState(-1);
 
+  const [cardBot, setCardBot] = useState([]);
+
   const changeCardSelect = (idCard) => {
     setCardSelect(idCard);
   };
   const randomBeerPage = Math.floor(Math.random() * 66);
+
+  // pour recuperer 5 carte depuis API//
   useEffect(() => {
     fetch(`https://api.punkapi.com/v2/beers?page=${randomBeerPage}&per_page=5`)
       .then((response) => response.json())
@@ -26,6 +30,7 @@ function Gamefield() {
       });
   }, []);
 
+  // function pour mettre la carte dans le field //
   const putCardOnField = (cardId) => {
     const cleanTable = ({ newCardList, newCardOnField }, card) => {
       if (card.id !== cardId) {
@@ -38,6 +43,12 @@ function Gamefield() {
         newCardOnField,
       };
     };
+
+    // function pour mettre carte random de robot //
+    fetch(`https://api.punkapi.com/v2/beers/random`)
+      .then((response) => response.json())
+      .then((beerData) => setCardBot(beerData));
+    console.info(cardBot);
 
     const { newCardList, newCardOnField } = cardListOrigin.reduce(cleanTable, {
       newCardList: [],
@@ -55,6 +66,7 @@ function Gamefield() {
         putCardOnField={putCardOnField}
         cardSelect={cardSelect}
         changeCardSelect={changeCardSelect}
+        cardBot={cardBot}
         isPlayed={false}
       />
       <Score />
