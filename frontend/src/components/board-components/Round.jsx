@@ -19,7 +19,7 @@ function Round({
             changeRound(rounds);
           }}
         >
-          Change Round
+          Change Round {value}
         </button>
       )}
       {cardOnField[0] !== undefined && enemyCard[0] !== undefined && (
