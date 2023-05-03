@@ -8,7 +8,6 @@ function Field({
   putCardOnField,
   enemyCard,
   isPlayed,
-  cardBot,
 }) {
   return (
     <section className="warField">
@@ -33,18 +32,6 @@ function Field({
           putCardOnField={putCardOnField}
           isPlayed={isPlayed}
         />
-      ))}
-      <div>emplacement 2</div>
-      {cardBot.map((card) => (
-        <li key={card.id}>
-          <Card
-            card={card}
-            cardSelect={cardSelect}
-            changeCardSelect={changeCardSelect}
-            putCardOnField={putCardOnField}
-            isPlayed={isPlayed}
-          />
-        </li>
       ))}
     </section>
   );
@@ -75,17 +62,6 @@ Field.propTypes = {
     }).isRequired
   ).isRequired,
   isPlayed: PropTypes.bool.isRequired,
-
-  cardBot: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      abv: PropTypes.number.isRequired,
-      ibu: PropTypes.number.isRequired,
-      ebc: PropTypes.number.isRequired,
-      srm: PropTypes.number.isRequired,
-    }).isRequired
-  ).isRequired,
 };
 
 export default Field;

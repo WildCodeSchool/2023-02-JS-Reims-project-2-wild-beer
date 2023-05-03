@@ -9,7 +9,6 @@ function Gamefield() {
   const [cardListOrigin, setCardListOrigin] = useState([]);
   const [cardOnField, setCardOnField] = useState([]);
   const [cardSelect, setCardSelect] = useState(-1);
-  const [cardBot, setCardBot] = useState([]);
   const [enemyCard, setEnemyCard] = useState([]);
 
   const changeCardSelect = (idCard) => {
@@ -43,13 +42,6 @@ function Gamefield() {
         newCardOnField,
       };
     };
-
-    // function pour mettre carte random de robot //
-    fetch(`https://api.punkapi.com/v2/beers/random`)
-      .then((response) => response.json())
-      .then((beerData) => setCardBot(beerData));
-    console.info(cardBot);
-
     const { newCardList, newCardOnField } = cardListOrigin.reduce(cleanTable, {
       newCardList: [],
       newCardOnField: [],
@@ -72,7 +64,6 @@ function Gamefield() {
         putCardOnField={putCardOnField}
         cardSelect={cardSelect}
         changeCardSelect={changeCardSelect}
-        cardBot={cardBot}
         enemyCard={enemyCard}
         isPlayed={false}
       />
