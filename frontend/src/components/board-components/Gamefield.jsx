@@ -3,6 +3,7 @@ import Field from "./Field";
 
 import Score from "../Score";
 import Hand from "./Hand";
+import Round from "./Round";
 
 function Gamefield() {
   const [cardList, setCardList] = useState([]);
@@ -67,6 +68,7 @@ function Gamefield() {
         enemyCard={enemyCard}
         isPlayed={false}
       />
+      <Round />
       <Score />
       <Hand
         cardList={cardList}
