@@ -282,6 +282,13 @@ nav img {
   font-size: 1.5rem;
 }
 
+.affichageScore {
+  align-self: center;
+  background-color: lightgrey;
+  border-radius: 2rem;
+  opacity: 0.7;
+}
+
 @media screen and (min-width: 1200px) {
   .listRules {
     top: 50%;
@@ -302,6 +309,7 @@ nav img {
   border-radius: 10rem;
   font-size: 1.2rem;
   box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
+  z-index: 1;
 }
 @media screen and (max-width: 800px) {
   .firstMenu {
@@ -348,6 +356,10 @@ nav img {
     color: white;
   }
   .warField {
-    width: 100%;
+    width: 19rem;
+    align-self: center;
+  }
+  .scoreBoard-name {
+    width: 4rem;
   }
 }
