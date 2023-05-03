@@ -6,23 +6,33 @@ function Field({
   cardSelect,
   changeCardSelect,
   putCardOnField,
+  enemyCard,
   isPlayed,
 }) {
   return (
     <section className="warField">
       <div>emplacement 1</div>
       {cardOnField.map((card) => (
-        <li key={card.id}>
-          <Card
-            card={card}
-            cardSelect={cardSelect}
-            changeCardSelect={changeCardSelect}
-            putCardOnField={putCardOnField}
-            isPlayed={isPlayed}
-          />
-        </li>
+        <Card
+          key={card.id}
+          card={card}
+          cardSelect={cardSelect}
+          changeCardSelect={changeCardSelect}
+          putCardOnField={putCardOnField}
+          isPlayed={isPlayed}
+        />
       ))}
       <h1>VS</h1>
+      {enemyCard.map((card) => (
+        <Card
+          key={card.id}
+          card={card}
+          cardSelect={cardSelect}
+          changeCardSelect={changeCardSelect}
+          putCardOnField={putCardOnField}
+          isPlayed={isPlayed}
+        />
+      ))}
       <div>emplacement 2</div>
     </section>
   );
@@ -42,6 +52,16 @@ Field.propTypes = {
   cardSelect: PropTypes.number.isRequired,
   changeCardSelect: PropTypes.func.isRequired,
   putCardOnField: PropTypes.func.isRequired,
+  enemyCard: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      abv: PropTypes.number,
+      ibu: PropTypes.number,
+      ebc: PropTypes.number,
+      srm: PropTypes.number,
+    }).isRequired
+  ).isRequired,
   isPlayed: PropTypes.bool.isRequired,
 };
 
