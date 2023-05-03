@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Field from "./Field";
-
-import Score from "../Score";
 import Hand from "./Hand";
 
 function Gamefield() {
@@ -66,7 +64,6 @@ function Gamefield() {
         enemyCard={enemyCard}
         isPlayed={false}
       />
-      <Score />
       <Hand
         cardList={cardList}
         putCardOnField={putCardOnField}

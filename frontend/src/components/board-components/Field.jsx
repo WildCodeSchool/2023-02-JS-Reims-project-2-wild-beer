@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import Card from "../Card";
 import Round from "./Round";
 
@@ -12,12 +13,20 @@ function Field({
   isPlayed,
 }) {
   const [value, setValue] = useState("EBC");
+  const [onePlayerScore, setOnePlayerScore] = useState(0);
+  const [twoPlayerScore, setTwoPlayerScore] = useState(0);
+  let { username } = useParams();
+  if (username === undefined) {
+    username = "Player";
+  }
 
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
       console.info(`${value1} win 1 point`);
+      setOnePlayerScore(onePlayerScore + 1);
     } else if (value1 < value2) {
       console.info(`${value2} win 1 point`);
+      setTwoPlayerScore(twoPlayerScore + 1);
     } else {
       console.info("Egalité");
     }
@@ -56,37 +65,49 @@ function Field({
   };
 
   return (
-    <section className="warField">
-      {cardOnField.map((card) => (
-        <Card
-          key={card.id}
-          card={card}
-          cardSelect={cardSelect}
-          changeCardSelect={changeCardSelect}
-          putCardOnField={putCardOnField}
-          isPlayed={isPlayed}
-        />
-      ))}
-      <div className="center-field">
-        <Round
-          value={value}
-          changeRound={changeRound}
-          cardOnField={cardOnField}
-          enemyCard={enemyCard}
-          checkRound={checkRound}
-        />
+    <>
+      <section className="warField">
+        {cardOnField.map((card) => (
+          <Card
+            key={card.id}
+            card={card}
+            cardSelect={cardSelect}
+            changeCardSelect={changeCardSelect}
+            putCardOnField={putCardOnField}
+            isPlayed={isPlayed}
+          />
+        ))}
+        <div className="center-field">
+          <Round
+            value={value}
+            changeRound={changeRound}
+            cardOnField={cardOnField}
+            enemyCard={enemyCard}
+            checkRound={checkRound}
+          />
+        </div>
+        {enemyCard.map((card) => (
+          <Card
+            key={card.id}
+            card={card}
+            cardSelect={cardSelect}
+            changeCardSelect={changeCardSelect}
+            putCardOnField={putCardOnField}
+            isPlayed={isPlayed}
+          />
+        ))}
+      </section>
+      <div className="scoreBoard">
+        <div className="scoreBoard-name">
+          {username}
+          <div>{onePlayerScore}</div>
+        </div>
+        <div className="scoreBoard-name">
+          Renaud
+          <div>{twoPlayerScore}</div>
+        </div>
       </div>
-      {enemyCard.map((card) => (
-        <Card
-          key={card.id}
-          card={card}
-          cardSelect={cardSelect}
-          changeCardSelect={changeCardSelect}
-          putCardOnField={putCardOnField}
-          isPlayed={isPlayed}
-        />
-      ))}
-    </section>
+    </>
   );
 }
 

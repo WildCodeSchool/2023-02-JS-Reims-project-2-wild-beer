@@ -6,7 +6,6 @@ function Round({ value, changeRound, cardOnField, enemyCard, checkRound }) {
   return (
     <>
       <h1 className="showRound">{value}</h1>
-      <h1>VS</h1>
       {cardOnField[0] !== undefined && enemyCard[0] !== undefined && (
         <button
           className="buttonRound"
@@ -18,15 +17,17 @@ function Round({ value, changeRound, cardOnField, enemyCard, checkRound }) {
           Change Round
         </button>
       )}
-      <button
-        className="buttonRound"
-        type="button"
-        onClick={() => {
-          checkRound(rounds);
-        }}
-      >
-        Jouer
-      </button>
+      {cardOnField[0] !== undefined && enemyCard[0] !== undefined && (
+        <button
+          className="buttonRound"
+          type="button"
+          onClick={() => {
+            checkRound(rounds);
+          }}
+        >
+          Jouer
+        </button>
+      )}
     </>
   );
 }
