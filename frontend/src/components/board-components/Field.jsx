@@ -13,7 +13,8 @@ function Field({
   isPlayed,
 }) {
   const rounds = ["SRM", "IBU", "ABV", "EBC"];
-  const [value, setValue] = useState("EBC");
+  const [roundNumber, setRoundNumber] = useState(1);
+  const [value, setValue] = useState("SRM");
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
   const [resultRound, setResultRound] = useState(
@@ -38,8 +39,14 @@ function Field({
   };
   // change round random //
   const changeRound = (arrRounds) => {
-    const round = Math.round(Math.random() * (arrRounds.length - 1));
-    setValue(arrRounds[round]);
+    if (roundNumber === 4) {
+      setRoundNumber(roundNumber + 1);
+      const lastRound = Math.round(Math.random() * (arrRounds.length - 1));
+      setValue(arrRounds[lastRound]);
+    } else {
+      setValue(arrRounds[roundNumber]);
+      setRoundNumber(roundNumber + 1);
+    }
   };
 
   const checkRound = () => {
@@ -60,7 +67,7 @@ function Field({
         compareValue(cardOnField[0].abv, enemyCard[0].abv);
         break;
       case "SRM":
-        console.info(cardOnField[0].srm);
+        console.info("srm", cardOnField[0].srm);
         console.info(enemyCard[0].srm);
         compareValue(cardOnField[0].srm, enemyCard[0].srm);
         break;

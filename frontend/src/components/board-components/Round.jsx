@@ -27,7 +27,7 @@ function Round({
           className="buttonRound"
           type="button"
           onClick={() => {
-            checkRound(rounds);
+            checkRound();
           }}
         >
           Jouer
