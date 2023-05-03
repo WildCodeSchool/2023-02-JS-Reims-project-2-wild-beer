@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "Virgil";
   src: url(./assets/font/Virgil.woff2) format("woff2");
@@ -137,6 +142,7 @@ nav img {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .rules {
   list-style: none;
@@ -145,17 +151,24 @@ nav img {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  gap : 2rem;
 }
 .listRules {
+  box-sizing: border-box;
+  width: 60ch;
+  max-width: 100%;
   background-color: #422c24;
   border-radius: 2rem;
   position: fixed;
-  top: 10rem;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0.85;
   color: white;
   z-index: 3;
   font-family: "Virgil";
   text-align: center;
+  padding: 2rem;
 }
 .rules li {
   font-size: large;
@@ -309,20 +322,29 @@ nav img {
     font-size: 15px;
     z-index: 1;
   }
+
   .card {
     height: 170px;
     width: 120px;
     font-size: 10px;
     bottom: 0;
     position: relative;
-    margin-right: -100px;
+    margin-right: -10rem;
   }
   .containertest {
     gap: 2rem;
     margin-right: 7rem;
   }
+
+  .titleRules {
+    font-size: x-large;
+  }
+  .rules {
+    gap: 1rem;
+  }
+
   .rules li {
-    font-size: 10px;
+    font-size: 14px;
   }
   .home p {
     font-size: larger;
