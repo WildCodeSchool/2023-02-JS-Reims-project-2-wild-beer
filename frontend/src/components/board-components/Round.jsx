@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
 
-function Round({ value, changeRound, cardOnField, enemyCard, checkRound }) {
-  const rounds = ["SRM", "IBU", "ABV", "EBC"];
-
+function Round({
+  value,
+  changeRound,
+  cardOnField,
+  enemyCard,
+  checkRound,
+  rounds,
+}) {
   return (
     <>
       <h1 className="showRound">{value}</h1>
@@ -56,6 +61,7 @@ Round.propTypes = {
     }).isRequired
   ).isRequired,
   checkRound: PropTypes.func.isRequired,
+  rounds: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default Round;

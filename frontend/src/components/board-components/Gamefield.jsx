@@ -13,9 +13,11 @@ function Gamefield() {
   const changeCardSelect = (idCard) => {
     setCardSelect(idCard);
   };
-  const randomBeerPage = Math.floor(Math.random() * 64);
+  const randomBeerPage = Math.floor(Math.random() * 63);
   useEffect(() => {
-    fetch(`https://api.punkapi.com/v2/beers?page=${randomBeerPage}&per_page=5`)
+    fetch(
+      `https://api.punkapi.com/v2/beers?page=${randomBeerPage}&per_page=5&abvgt=1&ibu_gt=1&ebc_gt=1`
+    )
       .then((response) => response.json())
       .then((data) => {
         for (let i = 0; i < 5; i += 1) {
@@ -43,8 +45,10 @@ function Gamefield() {
       newCardList: [],
       newCardOnField: [],
     });
-
-    fetch(`https://api.punkapi.com/v2/beers/random`)
+    const randomBeerEnemyPage = Math.floor(Math.random() * 300);
+    fetch(
+      `https://api.punkapi.com/v2/beers?page=${randomBeerEnemyPage}&per_page=1&abvgt=1&ibu_gt=1&ebc_gt=1`
+    )
       .then((response) => response.json())
       .then((data) => {
         setEnemyCard(data);

@@ -12,9 +12,13 @@ function Field({
   enemyCard,
   isPlayed,
 }) {
+  const rounds = ["SRM", "IBU", "ABV", "EBC"];
   const [value, setValue] = useState("EBC");
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
+  const [resultRound, setResultRound] = useState(
+    "Jouez une carte pour commencer"
+  );
   let { username } = useParams();
   if (username === undefined) {
     username = "Player";
@@ -22,13 +26,13 @@ function Field({
 
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
-      console.info(`${value1} win 1 point`);
       setOnePlayerScore(onePlayerScore + 1);
+      setResultRound(`${username} remporte la manche`);
     } else if (value1 < value2) {
-      console.info(`${value2} win 1 point`);
       setTwoPlayerScore(twoPlayerScore + 1);
+      setResultRound(`Renaud remporte la manche`);
     } else {
-      console.info("Egalité");
+      setResultRound(`Egalité`);
     }
   };
 
@@ -84,6 +88,7 @@ function Field({
             cardOnField={cardOnField}
             enemyCard={enemyCard}
             checkRound={checkRound}
+            rounds={rounds}
           />
         </div>
         {enemyCard.map((card) => (
@@ -102,6 +107,7 @@ function Field({
           {username}
           <div>{onePlayerScore}</div>
         </div>
+        <div>{resultRound}</div>
         <div className="scoreBoard-name">
           Renaud
           <div>{twoPlayerScore}</div>
