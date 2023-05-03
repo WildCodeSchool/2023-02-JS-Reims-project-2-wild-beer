@@ -23,6 +23,7 @@ function Field({
         />
       ))}
       <h1>VS</h1>
+      <div>emplacement 2</div>
       {enemyCard.map((card) => (
         <Card
           key={card.id}
