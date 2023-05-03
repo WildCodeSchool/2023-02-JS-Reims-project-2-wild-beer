@@ -59,6 +59,7 @@ function Field({
         />
       ))}
       <h1>VS</h1>
+      <input type="text" onChange={handleRound} />
       {enemyCard.map((card) => (
         <Card
           key={card.id}
