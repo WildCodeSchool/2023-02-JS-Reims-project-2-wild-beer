@@ -31,3 +31,26 @@
 li {
   list-style-type: none;
 }
+.center-field {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes animationRound {
+  from {
+    scale: 1.5;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.showRound {
+  animation: animationRound 4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
