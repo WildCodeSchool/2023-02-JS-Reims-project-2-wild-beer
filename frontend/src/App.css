@@ -382,8 +382,10 @@ nav img {
     position: relative;
   }
   .warField {
-    width: 19rem;
-    align-self: center;
+    display: flex;
+    text-align: center;
+    width: 10rem;
+    padding-right: 11.5rem;
   }
   .scoreBoard-name {
     width: 5rem;
@@ -399,9 +401,21 @@ nav img {
     font-size: small;
   }
   .scoreBoard-name {
-    padding: 0.5rem;
     height: 4rem;
     font-size: 1rem;
     background-size: 6rem;
+  }
+
+  .center-field {
+    padding-left: 7rem;
+  }
+
+  .showRound {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+
+  .button-info {
+    display: none;
   }
 }
