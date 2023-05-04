@@ -307,17 +307,6 @@ nav img {
   font-size: 1.2rem;
 }
 
-/*Round */
-.buttonRound {
-  width: 8rem;
-  height: 5rem;
-  background-color: white;
-  border-radius: 1rem;
-  font-family: "Virgil";
-  box-shadow: 5px 5px 5px black;
-  font-size: larger;
-}
-
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
