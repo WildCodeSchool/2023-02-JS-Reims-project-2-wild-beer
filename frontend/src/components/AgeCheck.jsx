@@ -9,7 +9,7 @@ function AgeVerification() {
         <p className="home-p">Decouvre le monde de la zythologie</p>
         <section className="containerMenu containerMenu-AgeVerification">
           <form className="firstMenu">
-            <h1>Avez vous plus de 18 ans ?</h1>
+            <p>Avez-vous plus de 18 ans ?</p>
             <Link to="/Menu">
               <button type="button" className="buttonFirstMenu">
                 Oui
