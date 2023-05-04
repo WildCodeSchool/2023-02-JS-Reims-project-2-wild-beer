@@ -6,7 +6,7 @@ function AgeVerification() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p className="home-p">Decouvre le monde zythologie</p>
+        <p className="home-p">Decouvre le monde de la zythologie</p>
         <section className="containerMenu containerMenu-AgeVerification">
           <form className="firstMenu">
             <h1>Avez vous plus de 18 ans ?</h1>
