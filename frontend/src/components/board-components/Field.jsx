@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "../Card";
 import Round from "./Round";
+import cacahuette from "../../Images/cacahuete-wildbeer.png";
 
 function Field({
   cardOnField,
@@ -114,12 +115,45 @@ function Field({
       <div className="scoreBoard">
         <div className="scoreBoard-name">
           {username}
-          <div>{onePlayerScore}</div>
+          <div>
+            {onePlayerScore > 0 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {onePlayerScore > 1 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {onePlayerScore > 2 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {onePlayerScore > 3 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {onePlayerScore > 4 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+          </div>
         </div>
         <div>{resultRound}</div>
         <div className="scoreBoard-name">
           Renaud
-          <div>{twoPlayerScore}</div>
+          <div>
+            {" "}
+            {twoPlayerScore > 0 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {twoPlayerScore > 1 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {twoPlayerScore > 2 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {twoPlayerScore > 3 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+            {twoPlayerScore > 4 && (
+              <img src={cacahuette} alt="cacahuette" className="cacahuette" />
+            )}
+          </div>
         </div>
       </div>
     </>

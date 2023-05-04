@@ -278,6 +278,11 @@ nav img {
 .warField {
   margin-top: 2rem;
 }
+.cacahuette {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
 
 @media screen and (min-width: 1200px) {
   .listRules {
@@ -299,6 +304,7 @@ nav img {
   border-radius: 10rem;
   font-size: 1.2rem;
 }
+
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
@@ -342,5 +348,10 @@ nav img {
   .home p {
     font-size: larger;
     color: white;
+  }
+  .cacahuette {
+    width: 20px;
+    height: 20px;
+    position: relative;
   }
 }
