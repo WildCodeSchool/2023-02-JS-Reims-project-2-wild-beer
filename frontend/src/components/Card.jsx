@@ -26,6 +26,8 @@ function Card({
       finalName += `${beerName[i]} `;
     }
   }
+
+  // get color bir by category EBC //
   const getColorClassName = () => {
     let colorClassName = "";
     if (ebc <= 10) {
@@ -74,6 +76,7 @@ function Card({
   );
 }
 
+// propTypes //
 Card.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.number.isRequired,

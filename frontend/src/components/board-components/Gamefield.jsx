@@ -17,6 +17,8 @@ function Gamefield() {
   const randomBeerPage = Math.floor(Math.random() * 63);
 
   // fetch de l'API qui va retourner un tableau de 5 objets qu'on mettra dans notre state cardList qui sera afficher dans le composant hand
+
+  // pour recuperer 5 carte depuis API//
   useEffect(() => {
     fetch(
       `https://api.punkapi.com/v2/beers?page=${randomBeerPage}&per_page=5&abvgt=1&ibu_gt=1&ebc_gt=1`
@@ -30,6 +32,8 @@ function Gamefield() {
       });
   }, []);
   // fonction qui s'exécute lorsque l'on joue une carte, plusieurs éléments s'exécute
+
+  // function pour mettre la carte dans le field //
   const putCardOnField = (cardId) => {
     // Tout d'abord création de la fonction cleanTable qui permet de préparer la fonction qui sera dans le reduce par la suite, on a deux paramètres (newCardList, newCardOnField) qui seront les deux accumulateurs
     const cleanTable = ({ newCardList, newCardOnField }, card) => {

@@ -14,7 +14,8 @@ function Field({
   isPlayed,
 }) {
   const rounds = ["SRM", "IBU", "ABV", "EBC"];
-  const [value, setValue] = useState("EBC");
+  const [roundNumber, setRoundNumber] = useState(1);
+  const [value, setValue] = useState("SRM");
   const [onePlayerScore, setOnePlayerScore] = useState(0);
   const [twoPlayerScore, setTwoPlayerScore] = useState(0);
   const [resultRound, setResultRound] = useState(
@@ -30,6 +31,7 @@ function Field({
 
   // fonction qui permet de comparer les valeurs correspondantes au round des deux cartes posé sur le field
 
+  // compare value bir //
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
       setOnePlayerScore(onePlayerScore + 1);
@@ -45,8 +47,14 @@ function Field({
   // fonction qui change le round
 
   const changeRound = (arrRounds) => {
-    const round = Math.round(Math.random() * (arrRounds.length - 1));
-    setValue(arrRounds[round]);
+    if (roundNumber === 4) {
+      setRoundNumber(roundNumber + 1);
+      const lastRound = Math.round(Math.random() * (arrRounds.length - 1));
+      setValue(arrRounds[lastRound]);
+    } else {
+      setValue(arrRounds[roundNumber]);
+      setRoundNumber(roundNumber + 1);
+    }
   };
 
   // fonction qui regarde en fonction du round les caractéristiques des cartes en appelant la fonction compareValue
@@ -69,7 +77,7 @@ function Field({
         compareValue(cardOnField[0].abv, enemyCard[0].abv);
         break;
       case "SRM":
-        console.info(cardOnField[0].srm);
+        console.info("srm", cardOnField[0].srm);
         console.info(enemyCard[0].srm);
         compareValue(cardOnField[0].srm, enemyCard[0].srm);
         break;
