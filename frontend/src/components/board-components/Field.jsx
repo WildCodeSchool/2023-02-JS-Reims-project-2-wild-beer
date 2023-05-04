@@ -61,23 +61,15 @@ function Field({
   const checkRound = () => {
     switch (value) {
       case "EBC":
-        console.info(cardOnField[0].ebc);
-        console.info(enemyCard[0].ebc);
         compareValue(cardOnField[0].ebc, enemyCard[0].ebc);
         break;
       case "IBU":
-        console.info(cardOnField[0].ibu);
-        console.info(enemyCard[0].ibu);
         compareValue(cardOnField[0].ibu, enemyCard[0].ibu);
         break;
       case "ABV":
-        console.info(cardOnField[0].abv);
-        console.info(enemyCard[0].abv);
         compareValue(cardOnField[0].abv, enemyCard[0].abv);
         break;
       case "SRM":
-        console.info("srm", cardOnField[0].srm);
-        console.info(enemyCard[0].srm);
         compareValue(cardOnField[0].srm, enemyCard[0].srm);
         break;
       default:
@@ -102,10 +94,10 @@ function Field({
           <Round
             value={value}
             changeRound={changeRound}
-            cardOnField={cardOnField}
             enemyCard={enemyCard}
             checkRound={checkRound}
             rounds={rounds}
+            roundNumber={roundNumber}
           />
         </div>
         {enemyCard.map((card) => (
