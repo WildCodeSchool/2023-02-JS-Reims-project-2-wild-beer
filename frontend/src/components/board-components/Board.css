@@ -17,7 +17,6 @@
   min-width: 100%;
   border-radius: 1rem;
   font-family: "Virgil";
-  margin-top: 2rem;
   border: 0;
   line-height: 2.5;
   padding: 0 20px;
@@ -57,4 +56,7 @@ li {
 
 .showRound {
   animation: animationRound 4s ease-in-out;
+  align-self: center;
+  background-color: lightgrey;
+  border-radius: 2rem;
 }

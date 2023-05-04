@@ -10,7 +10,7 @@ function Mineur() {
         <section className="containerMenu containerMenu-Mineur">
           <form className="firstMenu">
             <p>
-              Désolé, mais l'accès est réservé aux personnes majeures et vous ne
+              Désolé, l'accès est réservé aux personnes majeures et vous ne
               remplissez pas les critères d'âge requis pour jouer au jeu.
             </p>
             <Link to="/">
