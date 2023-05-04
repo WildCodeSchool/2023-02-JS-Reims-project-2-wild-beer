@@ -358,6 +358,7 @@ nav img {
   .warField {
     width: 19rem;
     align-self: center;
+    gap: 1.5rem;
   }
   .scoreBoard-name {
     width: 5rem;
