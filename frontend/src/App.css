@@ -103,7 +103,6 @@ nav img {
   background-color: #422c24;
   box-shadow: 5px 5px 5px black;
   color: white;
-  font-size: small;
 }
 .firstMenu label {
   font-size: xx-large;
@@ -117,7 +116,7 @@ nav img {
   border-radius: 1rem;
   font-family: "Virgil";
   box-shadow: 5px 5px 5px black;
-  width: 13rem;
+  padding: 0.2rem;
 }
 .buttonFirstMenu:hover {
   background-color: lightgrey;
@@ -439,6 +438,7 @@ li {
 @media screen and (max-width: 800px) {
   .firstMenu {
     max-width: 20rem;
+    font-size: small;
   }
   .inputFirstMenu {
     max-width: 18rem;
