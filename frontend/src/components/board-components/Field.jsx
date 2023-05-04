@@ -23,6 +23,11 @@ function Field({
   if (username === undefined) {
     username = "Player";
   }
+  if (username.length > 15) {
+    username = username.slice(0, 15);
+  }
+
+  // fonction qui permet de comparer les valeurs correspondantes au round des deux cartes posé sur le field
 
   const compareValue = (value1, value2) => {
     if (value1 > value2) {
@@ -36,10 +41,14 @@ function Field({
     }
   };
 
+  // fonction qui change le round
+
   const changeRound = (arrRounds) => {
     const round = Math.round(Math.random() * (arrRounds.length - 1));
     setValue(arrRounds[round]);
   };
+
+  // fonction qui regarde en fonction du round les caractéristiques des cartes en appelant la fonction compareValue
 
   const checkRound = () => {
     switch (value) {

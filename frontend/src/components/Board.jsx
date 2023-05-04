@@ -9,6 +9,9 @@ function Board() {
   if (username === undefined) {
     username = "Player";
   }
+  if (username.length > 15) {
+    username = username.slice(0, 15);
+  }
   return (
     <div className="main-board">
       <Navbar />

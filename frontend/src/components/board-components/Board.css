@@ -56,6 +56,10 @@ li {
 
 .showRound {
   animation: animationRound 4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   align-self: center;
   background-color: lightgrey;
   border-radius: 2rem;
