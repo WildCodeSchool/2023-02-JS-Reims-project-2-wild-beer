@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 function Card({
   card,
@@ -18,6 +19,8 @@ function Card({
   const maxCharName = 15;
   let beerName = card.name;
   beerName = beerName.split(" ");
+  const beerNameUrl = beerName.join("+");
+  console.info(beerNameUrl);
   let totalChar = 0;
   let finalName = "";
   for (let i = 0; i < beerName.length; i += 1) {
@@ -44,7 +47,16 @@ function Card({
     return colorClassName;
   };
   return (
-    <>
+    <section className="entire-card">
+      {cardSelect === card.id && !isPlayed && (
+        <NavLink
+          className="button-info"
+          to={`https://untappd.com/search?q=${beerNameUrl}`}
+          target="_blank"
+        >
+          Plus d'info
+        </NavLink>
+      )}
       <button
         type="button"
         className={`card ${getColorClassName()}`}
@@ -72,7 +84,7 @@ function Card({
           Joue
         </button>
       )}
-    </>
+    </section>
   );
 }
 
