@@ -356,9 +356,9 @@ nav img {
     color: white;
   }
   .warField {
-    width: 19rem;
-    align-self: center;
-    gap: 1.5rem;
+    width: 10rem;
+    justify-content: space-between;
+    padding-right: 10rem;
   }
   .scoreBoard-name {
     width: 5rem;
@@ -378,5 +378,13 @@ nav img {
     height: 4rem;
     font-size: 1rem;
     background-size: 6rem;
+  }
+  .center-field {
+    position: absolute;
+    padding-left: 7.9rem;
+  }
+
+  .showRound {
+    font-size: 0.7rem;
   }
 }
