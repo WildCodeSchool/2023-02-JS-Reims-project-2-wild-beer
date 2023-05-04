@@ -57,7 +57,9 @@ nav img {
   margin-left: 1rem;
   margin-right: 1rem;
   padding: inherit;
+  cursor: pointer;
 }
+
 .App {
   background-image: url("./assets/img/background-wood.jpg");
   background-repeat: no-repeat;
