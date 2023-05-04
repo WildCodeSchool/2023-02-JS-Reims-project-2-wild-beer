@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 
 function Round({
   value,
+  setValue,
   changeRound,
   enemyCard,
   checkRound,
   rounds,
   roundNumber,
+  onePlayerScore,
+  twoPlayerScore,
 }) {
   // test automatisation
   const [endGame, setEndGame] = useState(false);
@@ -22,6 +25,13 @@ function Round({
   useEffect(() => {
     if (roundNumber > 5) {
       setEndGame(true);
+      if (onePlayerScore > twoPlayerScore) {
+        setValue("Vous avez gagné");
+      } else if (onePlayerScore < twoPlayerScore) {
+        setValue("Renaud a gagné");
+      } else {
+        setValue("Egalité parfaite");
+      }
     }
   }, [roundNumber]);
 
@@ -36,6 +46,7 @@ function Round({
 
 Round.propTypes = {
   value: PropTypes.string,
+  setValue: PropTypes.func.isRequired,
   changeRound: PropTypes.func.isRequired,
   enemyCard: PropTypes.arrayOf(
     PropTypes.shape({
@@ -50,6 +61,8 @@ Round.propTypes = {
   checkRound: PropTypes.func.isRequired,
   rounds: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   roundNumber: PropTypes.number.isRequired,
+  onePlayerScore: PropTypes.number.isRequired,
+  twoPlayerScore: PropTypes.number.isRequired,
 };
 
 Round.defaultProps = {

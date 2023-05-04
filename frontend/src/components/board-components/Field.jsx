@@ -93,11 +93,14 @@ function Field({
         <div className="center-field">
           <Round
             value={value}
+            setValue={setValue}
             changeRound={changeRound}
             enemyCard={enemyCard}
             checkRound={checkRound}
             rounds={rounds}
             roundNumber={roundNumber}
+            onePlayerScore={onePlayerScore}
+            twoPlayerScore={twoPlayerScore}
           />
         </div>
         {enemyCard.map((card) => (
