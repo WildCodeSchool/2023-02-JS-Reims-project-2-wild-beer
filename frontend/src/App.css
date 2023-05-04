@@ -23,16 +23,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem;
   box-shadow: 5px 5px 5px black;
+  height: 2.5rem;
 }
 
 nav img {
-  width: 1.5rem;
+  width: 1.3rem;
+  padding: initial;
 }
 
 .navbar_logo {
-  width: 6.8rem;
+  width: 5.5rem;
 }
 
 @keyframes animation-navbar-button {
@@ -54,6 +55,7 @@ nav img {
   animation: animation-navbar-button 4s infinite;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding: inherit;
 }
 .App {
   background-image: url("./assets/img/background-wood.jpg");
@@ -108,6 +110,7 @@ nav img {
   background-color: #422c24;
   box-shadow: 5px 5px 5px black;
   color: white;
+  font-size: small;
 }
 .firstMenu label {
   font-size: xx-large;
@@ -121,6 +124,7 @@ nav img {
   border-radius: 1rem;
   font-family: "Virgil";
   box-shadow: 5px 5px 5px black;
+  width: 13rem;
 }
 .buttonFirstMenu:hover {
   background-color: lightgrey;
@@ -201,8 +205,8 @@ nav img {
   box-shadow: 5px 5px 5px black;
 }
 .card {
-  width: 150px;
-  height: 250px;
+  width: 130px;
+  height: 220px;
   border-radius: 1rem;
   background-color: #f4b324;
   background-image: url("./Images/WildBeer.png");
@@ -217,7 +221,7 @@ nav img {
   box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
 }
 .card:hover {
-  scale: 1.2;
+  scale: 1;
   transition: 0.2s all ease-in-out;
 }
 .card h1 {
@@ -234,7 +238,6 @@ nav img {
   background-color: lightgrey;
   opacity: 0.7;
   border-radius: 1rem;
-  width: inherit;
 }
 .card ul li {
   list-style: none;
@@ -274,15 +277,27 @@ nav img {
 .scoreBoard-name {
   padding: 1rem;
   text-align: center;
-  background-color: transparent;
-  width: 8rem;
-  border-radius: 10rem;
+  border-radius: 50%;
   font-size: 1.5rem;
+  box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-image: url(../src/Images/wild-beer-logo-opacity.png);
+  background-size: 7rem;
+  background-color: #ad1a1a;
+  background-position: center;
 }
 .scoreBoard-controls-button {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
+}
+
+.affichageScore {
+  align-self: center;
+  background-color: lightgrey;
+  border-radius: 2rem;
+  opacity: 0.7;
 }
 .warField {
   margin-top: 2rem;
@@ -307,17 +322,8 @@ nav img {
   padding: 1rem;
   border-radius: 10rem;
   font-size: 1.2rem;
-}
-
-/*Round */
-.buttonRound {
-  width: 8rem;
-  height: 5rem;
-  background-color: white;
-  border-radius: 1rem;
-  font-family: "Virgil";
-  box-shadow: 5px 5px 5px black;
-  font-size: larger;
+  box-shadow: lightgrey 0px 1px 6px, lightgrey 0px 0px 0px 3px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -331,9 +337,9 @@ nav img {
 
 @media screen and (max-width: 700px) {
   .card:hover {
-    height: 220px;
-    width: 150px;
-    font-size: 15px;
+    height: 210px;
+    width: 140px;
+    font-size: 10px;
     z-index: 1;
   }
 
@@ -363,5 +369,28 @@ nav img {
   .home p {
     font-size: larger;
     color: white;
+  }
+  .warField {
+    width: 19rem;
+    align-self: center;
+  }
+  .scoreBoard-name {
+    width: 5rem;
+  }
+  .card:hover {
+    scale: 0.9;
+  }
+  .affichageScore {
+    display: none;
+  }
+
+  .name-player {
+    font-size: small;
+  }
+  .scoreBoard-name {
+    padding: 0.5rem;
+    height: 4rem;
+    font-size: 1rem;
+    background-size: 6rem;
   }
 }
