@@ -4,7 +4,6 @@ import Hand from "./Hand";
 
 function Gamefield() {
   const [cardList, setCardList] = useState([]);
-  /* const [cardListOrigin, setCardListOrigin] = useState([]); */
   const [cardOnField, setCardOnField] = useState([]);
   const [enemyCard, setEnemyCard] = useState([]);
   const [cardSelect, setCardSelect] = useState(-1);
@@ -28,7 +27,6 @@ function Gamefield() {
           Object.defineProperty(data[i], "id", { value: i });
         }
         setCardList(data.slice(0, 5));
-        /* setCardListOrigin(data.slice(0, 5)); */
       });
   }, []);
   // fonction qui s'exécute lorsque l'on joue une carte, plusieurs éléments s'exécute
