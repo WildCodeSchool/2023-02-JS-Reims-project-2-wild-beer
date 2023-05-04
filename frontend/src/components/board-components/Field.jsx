@@ -133,7 +133,7 @@ function Field({
             )}
           </div>
         </div>
-        <div>{resultRound}</div>
+        <div className="affichageScore">{resultRound}</div>
         <div className="scoreBoard-name">
           Renaud
           <div>

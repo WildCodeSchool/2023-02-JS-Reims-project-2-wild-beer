@@ -15,7 +15,6 @@ function Menu() {
     <div className="background">
       <div className="home">
         <img src={logo} alt="" />
-        <p className="home-p home-p-menu">Découvre le monde de la zythologie</p>
         <section className="containerMenu">
           <form className="firstMenu">
             <label>
