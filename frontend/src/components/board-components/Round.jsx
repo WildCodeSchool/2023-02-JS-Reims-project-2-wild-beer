@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import { useEffect, useState } from "react";
 
+import gifVictory from "../../Images/Victory.gif";
+
 function Round({
   value,
   setValue,
@@ -15,6 +17,7 @@ function Round({
 }) {
   // test automatisation
   const [endGame, setEndGame] = useState(false);
+  const [victory, setVictory] = useState(false);
   useEffect(() => {
     if (enemyCard[0] !== undefined) {
       checkRound(rounds);
@@ -27,6 +30,7 @@ function Round({
       setEndGame(true);
       if (onePlayerScore > twoPlayerScore) {
         setValue("Vous avez gagné");
+        setVictory(true);
       } else if (onePlayerScore < twoPlayerScore) {
         setValue("Renaud a gagné");
       } else {
@@ -40,20 +44,28 @@ function Round({
   }
 
   return (
-    <div className="showRound">
-      {endGame && <h1>Fin de la partie</h1>}
-      {!endGame && <h1> Round {roundNumber}: </h1>}
-      <h1>{value}</h1>
-      {endGame && (
-        <button
-          onClick={refreshPage}
-          type="button"
-          className="button-recommencer"
-        >
-          Recommencer
-        </button>
+    <>
+      {victory && (
+        <img src={gifVictory} alt="loading..." className="gif-victory-right" />
       )}
-    </div>
+      {victory && (
+        <img src={gifVictory} alt="loading..." className="gif-victory-left" />
+      )}
+      <div className="showRound">
+        {endGame && <h1>Fin de la partie</h1>}
+        {!endGame && <h1> Round {roundNumber}: </h1>}
+        <h1>{value}</h1>
+        {endGame && (
+          <button
+            onClick={refreshPage}
+            type="button"
+            className="button-recommencer"
+          >
+            Recommencer
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 

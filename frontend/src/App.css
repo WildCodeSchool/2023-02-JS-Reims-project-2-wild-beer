@@ -529,6 +529,7 @@ li {
 
   .showRound h1 {
     font-size: 1.2rem;
+    width: 5rem;
   }
 
   .button-recommencer {
@@ -541,4 +542,18 @@ li {
   .navbar_nav {
     margin-bottom: -4.5rem;
   }
+}
+
+.gif-victory-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50rem;
+}
+
+.gif-victory-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50rem;
 }
