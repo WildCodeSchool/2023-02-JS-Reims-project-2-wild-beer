@@ -35,11 +35,24 @@ function Round({
     }
   }, [roundNumber]);
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className="showRound">
       {endGame && <h1>Fin de la partie</h1>}
       {!endGame && <h1> Round {roundNumber}: </h1>}
       <h1>{value}</h1>
+      {endGame && (
+        <button
+          onClick={refreshPage}
+          type="button"
+          className="button-recommencer"
+        >
+          Recommencer
+        </button>
+      )}
     </div>
   );
 }
